@@ -1,0 +1,154 @@
+{
+  "_readme": [
+    "=============================================================================",
+    " GO LIVE: this is the ONLY file you need to edit to start earning.",
+    "=============================================================================",
+    "",
+    " 1. Replace every 'url' value beginning with PLACEHOLDER_ with the real",
+    "    tracking link from your affiliate network.",
+    " 2. Set 'lastChecked' to today's date (YYYY-MM-DD).",
+    " 3. Run:  python3 tools/check.py   -- it will refuse to pass while any",
+    "    PLACEHOLDER_ string remains, so you cannot accidentally ship dead links.",
+    "",
+    " Until then the build renders a plain outbound link to the provider's own",
+    " site instead of an affiliate link, so the site is fully browsable and no",
+    " commission is claimed on any click.",
+    "",
+    " Commission figures below are what the providers publicly advertise. They",
+    " are informational only and are never used in scoring. If a rate changes,",
+    " update it here so the disclosure page stays accurate.",
+    "============================================================================="
+  ],
+
+  "settings": {
+    "affiliateLabel": { "en": "Ad", "sv": "Annons" },
+    "relAttribute": "sponsored nofollow noopener",
+    "targetBlank": true,
+    "disclosureBar": {
+      "en": "This page contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. It does not affect our ranking — see <a href=\"LINK_HOW\">how we rank</a>.",
+      "sv": "Denna sida innehåller annonslänkar. Om du köper via dem kan vi få en provision utan att det kostar dig något. Det påverkar inte vår rankning — se <a href=\"LINK_HOW\">så rankar vi</a>."
+    },
+    "ctaLabel": { "en": "Visit", "sv": "Besök" },
+    "ctaLabelWithPrice": { "en": "See pricing", "sv": "Se priser" }
+  },
+
+  "networks": [
+    { "id": "impact",   "name": "Impact.com",        "url": "https://impact.com" },
+    { "id": "cj",       "name": "CJ Affiliate",      "url": "https://cj.com" },
+    { "id": "awin",     "name": "Awin",              "url": "https://awin.com" },
+    { "id": "tradedoubler","name": "Tradedoubler",    "url": "https://tradedoubler.com" },
+    { "id": "inhouse",  "name": "In-house program",  "url": "" },
+    { "id": "none",     "name": "Not an affiliate",  "url": "" }
+  ],
+
+  "providers": {
+    "nordvpn": {
+      "url": "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158144&url_id=902",
+      "plainUrl": "https://nordvpn.com",
+      "network": "inhouse",
+      "commission": { "en": "40% on new 1-year and 2-year plans, up to 100% on some offers, 30% on renewals", "sv": "40 % på nya 1- och 2-årsplaner, upp till 100 % på vissa erbjudanden, 30 % på förnyelser" },
+      "cookieDays": 30,
+      "lastChecked": "2026-10-08",
+      "termsNote": { "en": "Prohibits paid search bidding on brand terms. Requires disclosure of affiliate status.", "sv": "Förbjuder betald sökning på varumärkestermer. Kräver att affiliatesstatus uppges." }
+    },
+    "surfshark": {
+      "url": "PLACEHOLDER_SURFSHARK",
+      "plainUrl": "https://surfshark.com",
+      "network": "impact",
+      "commission": { "en": "40% revenue share on qualifying sales", "sv": "40 % intäktsdelning på kvalificerade försäljningar" },
+      "cookieDays": 30,
+      "lastChecked": null,
+      "termsNote": { "en": "Brand bidding not permitted. Payouts are made monthly after a 45-day validation window.", "sv": "Sökning på varumärke är inte tillåten. Utbetalningar görs månadsvis efter ett 45 dagars valideringsfönster." }
+    },
+    "expressvpn": {
+      "url": "PLACEHOLDER_EXPRESSVPN",
+      "plainUrl": "https://www.expressvpn.com",
+      "network": "impact",
+      "commission": { "en": "Flat bounty of roughly USD 13 to 36 per sale depending on term length, paid on the first payment only", "sv": "Fast belopp på cirka 13–36 USD per försäljning beroende på avtalslängd, betalt endast på första betalningen" },
+      "cookieDays": 30,
+      "lastChecked": null,
+      "termsNote": { "en": "No recurring commission. Pre-sale content may be required for some offers.", "sv": "Ingen återkommande provision. Förvänansinnehåll kan krävas för vissa erbjudanden." }
+    },
+    "protonvpn": {
+      "url": "PLACEHOLDER_PROTONVPN",
+      "plainUrl": "https://protonvpn.com",
+      "network": "cj",
+      "commission": { "en": "30% recurring, plus cross-sell commission on Proton Mail and Proton Drive", "sv": "30 % återkommande, plus korsförsäljningsprovision på Proton Mail och Proton Drive" },
+      "cookieDays": 30,
+      "lastChecked": null,
+      "termsNote": { "en": "One of the longest cookie windows in the category at 30 days across all networks.", "sv": "Ett av de längsta cookie-fönstren i kategorin, 30 dagar över alla nätverk." }
+    },
+    "cyberghost": {
+      "url": "PLACEHOLDER_CYBERGHOST",
+      "plainUrl": "https://www.cyberghostvpn.com",
+      "network": "impact",
+      "commission": { "en": "Up to 100% of the first payment, CPA model", "sv": "Upp till 100 % av första betalningen, CPA-modell" },
+      "cookieDays": 45,
+      "lastChecked": null,
+      "termsNote": { "en": "A 45-day cookie window, longer than most. Commissions are clawed back if a customer refunds within the money-back window.", "sv": "45 dagars cookie-fönster, längre än de flesta. Provision återkrävs om en kund återför inom ångerrättsfönstret." }
+    },
+    "mullvad": {
+      "url": "PLACEHOLDER_MULLVAD",
+      "plainUrl": "https://mullvad.net",
+      "network": "inhouse",
+      "commission": { "en": "Flat 55 SEK-equivalent per referred customer, paid regardless of how long they stay subscribed", "sv": "Fast belopp motsvarande 55 kr per hänvisad kund, betalt oavsett hur länge kunden stannar prenumererad" },
+      "cookieDays": 30,
+      "lastChecked": null,
+      "termsNote": { "en": "Unusual model: no cookie tracking at all. Commission is granted by the customer entering your referral code at checkout.", "sv": "Ovanlig modell: ingen spårning alls. Provisionen beviljas när kunden anger din kampanjkod i kassan." }
+    },
+    "private-internet-access": {
+      "url": "PLACEHOLDER_PIA",
+      "plainUrl": "https://www.privateinternetaccess.com",
+      "network": "inhouse",
+      "commission": { "en": "100% of the first month on monthly plans, 33% on longer terms, 24% on renewals", "sv": "100 % av första månaden på månadsplaner, 33 % på längre avtal, 24 % på förnyelser" },
+      "cookieDays": 45,
+      "lastChecked": null,
+      "termsNote": { "en": "No payout minimum reported. Optional additional per-sale commission available on request.", "sv": "Ingen angiven utbetalningsgräns. Ytterligare provision per försäljning kan begäras." }
+    },
+    "ivpn": {
+      "url": "PLACEHOLDER_IVPN",
+      "plainUrl": "https://www.ivpn.net",
+      "network": "inhouse",
+      "commission": { "en": "Revenue share on subscriptions, disclosed as 100% of the first month by arrangement", "sv": "Intäktsdelning på prenumerationer, enligt uppgift 100 % av första månaden efter överenskommelse" },
+      "cookieDays": 30,
+      "lastChecked": null,
+      "termsNote": { "en": "Privacy-focused program with a small but committed affiliate community.", "sv": "Integritetsfokuserat program med en liten men engagerad affiliate-gemenskap." }
+    },
+    "windscribe": {
+      "url": "PLACEHOLDER_WINDSCRIBE",
+      "plainUrl": "https://windscribe.com",
+      "network": "impact",
+      "commission": { "en": "Recurring revenue share on paid plans", "sv": "Återkommande intäktsdelning på betalda planer" },
+      "cookieDays": 30,
+      "lastChecked": null,
+      "termsNote": { "en": "Promotional codes are typically provided on request. Higher tiers available for high-performing publishers.", "sv": "Kampanjkoder lämnas normalt på begäran. Högre nivåer tillgängliga för framgångsrika publicister." }
+    },
+    "adguard-vpn": {
+      "url": "https://adguard-vpn.com?aid=138408",
+      "plainUrl": "https://adguard-vpn.com",
+      "network": "inhouse",
+      "commission": { "en": "Rate varies by arrangement — confirm the current terms in your affiliate dashboard.", "sv": "Satsen varierar beroende på upplägg — bekräfta aktuella villkor i din affiliatepanel." },
+      "cookieDays": null,
+      "lastChecked": "2026-10-06",
+      "termsNote": { "en": "Provider-operated programme. Confirm tracking, cookie window and payout terms in your affiliate dashboard before publishing.", "sv": "Program som drivs av leverantören. Bekräfta spårning, cookiefönster och utbetalningsvillkor i din affiliatepanel innan publicering." }
+    },
+    "gearup-booster": {
+      "url": "https://www.jdoqocy.com/click-101897641-17235975",
+      "plainUrl": "https://www.gearupbooster.com/",
+      "network": "cj",
+      "commission": { "en": "Rate varies by arrangement — confirm the current terms in your affiliate dashboard.", "sv": "Satsen varierar beroende på upplägg — bekräfta aktuella villkor i din affiliatepanel." },
+      "cookieDays": null,
+      "lastChecked": "2026-10-08",
+      "termsNote": { "en": "CJ Affiliate link. Confirm tracking, cookie window and payout terms in your affiliate dashboard before publishing.", "sv": "CJ Affiliate-länk. Bekräfta spårning, cookiefönster och utbetalningsvillkor i din affiliatepanel innan publicering." }
+    },
+    "tunnelbear": {
+      "url": "PLACEHOLDER_TUNNELBEAR",
+      "plainUrl": "https://tunnelbear.com",
+      "network": "impact",
+      "commission": { "en": "Recurring commission on both free-trial and paid conversions", "sv": "Återkommande provision på både gratisperiods- och betalda konverteringar" },
+      "cookieDays": 30,
+      "lastChecked": null,
+      "termsNote": { "en": "Commissions validated after the 30-day money-back window to account for refunds.", "sv": "Provisioner valideras efter 30 dagars ångerrättsfönster för att hantera återbetalningar." }
+    }
+  }
+}

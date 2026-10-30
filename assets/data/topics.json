@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "section": "best-vpn-for",
+    "note": "Money pages: one guide per task under /best-vpn-for/<slug>/. `picks` is the curated top 3 for that task — editorial order, not the overall ranking, and every one of them must be a real provider id in providers.json. `criteria` re-weights the five published score components for the task and must sum to 100; provider scores themselves are never edited here.",
+    "criteriaSum": 100
+  },
+  "topics": [
+    {
+      "slug": "streaming",
+      "icon": "tv",
+      "picks": ["expressvpn", "nordvpn", "surfshark"],
+      "criteria": { "streaming": 40, "speed": 30, "price": 15, "privacy": 10, "easeOfUse": 5 }
+    },
+    {
+      "slug": "netflix",
+      "icon": "play",
+      "picks": ["expressvpn", "nordvpn", "cyberghost"],
+      "criteria": { "streaming": 45, "speed": 25, "price": 15, "easeOfUse": 10, "privacy": 5 }
+    },
+    {
+      "slug": "gaming",
+      "icon": "gamepad",
+      "picks": ["expressvpn", "nordvpn", "surfshark"],
+      "criteria": { "speed": 45, "streaming": 20, "privacy": 15, "easeOfUse": 10, "price": 10 }
+    },
+    {
+      "slug": "torrenting",
+      "icon": "download",
+      "picks": ["private-internet-access", "protonvpn", "mullvad"],
+      "criteria": { "privacy": 40, "speed": 20, "price": 20, "easeOfUse": 10, "streaming": 10 }
+    },
+    {
+      "slug": "privacy",
+      "icon": "shield",
+      "picks": ["protonvpn", "nordvpn", "mullvad"],
+      "criteria": { "privacy": 55, "speed": 15, "easeOfUse": 10, "price": 10, "streaming": 10 }
+    },
+    {
+      "slug": "travel",
+      "icon": "plane",
+      "picks": ["nordvpn", "expressvpn", "surfshark"],
+      "criteria": { "speed": 30, "privacy": 25, "streaming": 20, "easeOfUse": 15, "price": 10 }
+    },
+    {
+      "slug": "beginners",
+      "icon": "tool",
+      "picks": ["cyberghost", "tunnelbear", "expressvpn"],
+      "criteria": { "easeOfUse": 45, "price": 20, "privacy": 15, "speed": 15, "streaming": 5 }
+    },
+    {
+      "slug": "iphone",
+      "icon": "phone",
+      "picks": ["tunnelbear", "expressvpn", "protonvpn"],
+      "criteria": { "easeOfUse": 40, "privacy": 25, "price": 20, "speed": 10, "streaming": 5 }
+    },
+    {
+      "slug": "android",
+      "icon": "robot",
+      "picks": ["surfshark", "protonvpn", "nordvpn"],
+      "criteria": { "easeOfUse": 35, "privacy": 30, "price": 20, "speed": 10, "streaming": 5 }
+    },
+    {
+      "slug": "windows",
+      "icon": "monitor",
+      "picks": ["expressvpn", "nordvpn", "private-internet-access"],
+      "criteria": { "easeOfUse": 35, "speed": 25, "privacy": 25, "price": 10, "streaming": 5 }
+    },
+    {
+      "slug": "mac",
+      "icon": "laptop",
+      "picks": ["expressvpn", "nordvpn", "protonvpn"],
+      "criteria": { "easeOfUse": 40, "privacy": 25, "speed": 20, "price": 10, "streaming": 5 }
+    },
+    {
+      "slug": "routers",
+      "icon": "router",
+      "picks": ["nordvpn", "expressvpn", "surfshark"],
+      "criteria": { "speed": 35, "easeOfUse": 30, "privacy": 20, "price": 10, "streaming": 5 }
+    }
+  ]
+}

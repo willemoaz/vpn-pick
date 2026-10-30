@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3X91TTYPWR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-3X91TTYPWR');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VPN-Pick.com — VPN comparisons in English &amp; Swedish</title>
+<meta name="description" content="Independent VPN comparisons. Choose your language: English or Svenska.">
+<meta name="robots" content="noindex, follow">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#080b14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f9fc" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://vpn-pick.com/">
+<link rel="alternate" hreflang="en" href="https://vpn-pick.com/en/">
+<link rel="alternate" hreflang="sv" href="https://vpn-pick.com/sv/">
+<link rel="alternate" hreflang="x-default" href="https://vpn-pick.com/en/">
+<link rel="icon" href="assets/img/vpn-pick-icon.png?v=84139604" type="image/png"><link rel="stylesheet" href="assets/css/site.css?v=4978db5f"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5225967374919408" crossorigin="anonymous"></script>
+<link rel="apple-touch-icon" href="assets/img/vpn-pick-touch.png">
+<script>/* theme before first paint, so a light-mode visitor never sees a dark flash */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem('vpnpick:theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') {
+    t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
+      ? 'light' : 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', t);
+})();</script>
+<script>
+/* Pick a language from the browser, then leave. Falls back to English. */
+(function () {
+  var nav = (navigator.languages || [navigator.language || 'en'])
+            .join(',').toLowerCase();
+  var target = nav.indexOf('sv') === 0 || nav.indexOf(',sv') > -1 ? 'sv/' : 'en/';
+  location.replace(target);
+})();
+</script>
+<style>
+  .picks { display: grid; gap: 16px; margin-top: 32px;
+           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 560px; }
+</style>
+</head>
+<body>
+  <main id="main" class="wrap" style="padding-block:15vh 10vh;max-width:640px">
+    <div class="logo-plate" style="margin-bottom:28px">
+      <img src="assets/img/vpn-pick-lockup.png" width="110" height="152" alt="VPN-Pick.com">
+    </div>
+    <h1 style="font-size:clamp(1.9rem,6vw,2.8rem)">Choose your language</h1>
+    <p class="lede" style="margin-top:1rem">Välj språk. We redirect you automatically.</p>
+    <div class="picks">
+      <a class="btn btn--primary btn--lg" href="en/">English</a>
+      <a class="btn btn--ghost btn--lg" href="sv/" lang="sv">Svenska</a>
+    </div>
+    <p class="faint" style="margin-top:2.5rem">
+      <a href="en/">Continue in English</a> · <a href="sv/" lang="sv">Fortsätt på svenska</a>
+    </p>
+  </main>
+</body>
+</html>

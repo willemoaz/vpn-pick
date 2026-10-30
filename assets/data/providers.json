@@ -1,0 +1,904 @@
+{
+  "_meta": {
+    "schemaVersion": 1,
+    "updated": "2026-10-04",
+    "note": "Single source of truth for all VPN data. Every factual claim must be traceable to the provider's own documentation or a named third-party audit. If a value cannot be verified it is written as null and rendered as 'not publicly documented' — never guessed.",
+    "scoringModel": {
+      "weights": {
+        "privacy": 0.30,
+        "speed": 0.25,
+        "price": 0.20,
+        "streaming": 0.15,
+        "easeOfUse": 0.10
+      },
+      "scale": 10
+    },
+    "benchmarking": "We have NOT run our own speed benchmarks. The speed score is an editorial estimate derived from network architecture (protocol support, RAM-only vs disk, server density, dedicated streaming infrastructure) aggregated with findings from published independent reviews that we cite. 'speedTestedByUs' is false for every provider and this is disclosed on every page."
+  },
+
+  "providers": [
+    {
+      "id": "nordvpn",
+      "rank": 1,
+      "name": "NordVPN",
+      "slug": "nordvpn",
+      "color": "#1a6dd6",
+      "monogram": "N",
+      "badge": { "en": "Best overall", "sv": "Bäst totalt" },
+      "tagline": {
+        "en": "Six independent no-logs audits, a RAM-only fleet, and the highest overall score in our comparison.",
+        "sv": "Sex oberoende loggfria revisioner, en RAM-baserad flotta och det högsta totalbetyget i vår jämförelse."
+      },
+      "bestFor": ["everyone", "streaming", "travel", "privacy"],
+      "launchYear": 2012,
+      "headquarters": "Panama",
+      "owner": "Nord Security",
+      "eyesAlliance": "none",
+      "ramOnly": true,
+      "openSourceApps": false,
+      "servers": 6400,
+      "countries": 111,
+      "devices": 10,
+      "deviceLimitType": "limited",
+      "protocols": ["WireGuard", "OpenVPN", "NordLynx"],
+      "streamingScoreNote": {
+        "en": "Unblocks the major Nordic and US catalogues; our streaming score for NordVPN is 9.2.",
+        "sv": "Låser upp de större nordiska och amerikanska katalogerna; vårt streamingbetyg för NordVPN är 9,2."
+      },
+      "audit": {
+        "firm": "Deloitte and PwC",
+        "count": 6,
+        "latest": "2025-12",
+        "url": "https://nordvpn.com/blog/nordvpn-no-logs-audit/"
+      },
+      "transparencyReport": true,
+      "courtTested": false,
+      "courtTestedNote": {
+        "en": "No published case in which user data was produced. Servers were seized in 2018 during a criminal investigation; no data was found.",
+        "sv": "Inget publicerat fall där användardata har lämnats ut. Servrar beslagtogs 2018 under en brottsutredning; ingen data hittades."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 749, "monthlySEK": 31, "totalUSD": 74, "monthlyUSD": 3.09 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 989, "monthlySEK": 82, "totalUSD": 98, "monthlyUSD": 8.17 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 139, "monthlySEK": 139, "totalUSD": 13.99, "monthlyUSD": 13.99 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": false,
+      "freeTrial": false,
+      "scores": { "privacy": 9.6, "speed": 9.4, "price": 9.0, "streaming": 9.2, "easeOfUse": 9.3 },
+      "scoreBasis": {
+        "en": "Six named audit engagements with Deloitte and PwC, a RAM-only fleet, Panama jurisdiction outside all Eyes alliances. Price is strong on a 2-year term but the renewal price roughly doubles, which costs points. Speed is an editorial estimate, not our own benchmark.",
+        "sv": "Sex namngivna granskningar med Deloitte och PwC, RAM-servrar, jurisdiktion i Panama utanför alla Eyes-allianser. Priset är starkt på 2-årsplan men förnyelsepriset fördubblas ungefär, vilket kostar poäng. Hastighet är en redaktionell uppskattning, inte vår egen mätning."
+      },
+      "pros": [
+        { "en": "Six independent no-logs audits with Deloitte and PwC, the latest dated 2025-12", "sv": "Sex oberoende revisioner med Deloitte och PwC, den senaste från 2025-12" },
+        { "en": "RAM-only servers make log retention structurally impossible", "sv": "RAM-servrar gör loggning strukturellt omöjlig" },
+        { "en": "Panama sits outside the 5/9/14-Eyes intelligence alliances", "sv": "Panama ligger utanför 5/9/14-Eyes-underrättelseförbunden" },
+        { "en": "Consistent streaming unblocking with dedicated infrastructure", "sv": "Konsekvent upplåsning av streaming med egen infrastruktur" },
+        { "en": "Threat Protection blocks trackers and malicious sites at the DNS layer", "sv": "Threat Protection blockerar spårare och skadliga sajter på DNS-nivå" }
+      ],
+      "cons": [
+        { "en": "10-device limit is restrictive for large households", "sv": "Gräns på 10 enheter är begränsande för stora hushåll" },
+        { "en": "Renewal price is roughly double the promotional price", "sv": "Förnyelsepriset är ungefär dubbelt så högt som kampanjpriset" },
+        { "en": "Apps are closed source, so claims cannot be verified by reading the code", "sv": "Apparna är källkodslösa, så påståenden går inte att verifiera genom att läsa koden" },
+        { "en": "Full feature set costs more than Surfshark or CyberGhost on longer terms", "sv": "Hela funktionsuppsättningen kostar mer än Surfshark eller CyberGhost på längre avtal" }
+      ],
+      "idealFor": {
+        "en": "People who want one subscription that covers every use case and who care that the no-logs claim is externally verified rather than merely promised.",
+        "sv": "Personer som vill ha en prenumeration som täcker alla användningsfall och som bryr sig om att loggfriheten är externt verifierad, inte bara lovad."
+      },
+      "verdict": {
+        "en": "The default recommendation. NordVPN pairs a RAM-only fleet with six independent audits, and its speed score of 9.4 means you do not have to choose between privacy and throughput. The renewal price jump is real and worth setting a reminder for, but a 30-day money-back window makes the first commitment low-risk.",
+        "sv": "Standardrekommendationen. NordVPN kombinerar en RAM-baserad flotta med sex oberoende revisioner, och hastighetsbetyget 9,4 innebär att du inte behöver välja mellan integritet och genomströmning. Prisökningen vid förnyelse är verklig och värd en påminnelse, men 30 dagars ångerrätt gör den första bindningen lågrisk."
+      }
+    },
+
+    {
+      "id": "surfshark",
+      "rank": 2,
+      "name": "Surfshark",
+      "slug": "surfshark",
+      "color": "#0f4c8c",
+      "monogram": "S",
+      "badge": { "en": "Best value", "sv": "Bäst pris" },
+      "tagline": {
+        "en": "Genuinely unlimited devices, and a two-year price below NordVPN, ExpressVPN or CyberGhost.",
+        "sv": "Genuint obegränsat antal enheter och ett 2-årspris under NordVPN, ExpressVPN eller CyberGhost."
+      },
+      "bestFor": ["families", "budget", "devices", "streaming"],
+      "launchYear": 2018,
+      "headquarters": "Netherlands",
+      "owner": "Nord Security (since 2022 merger)",
+      "eyesAlliance": "9-eyes",
+      "ramOnly": true,
+      "openSourceApps": false,
+      "servers": 3200,
+      "countries": 100,
+      "devices": -1,
+      "deviceLimitType": "unlimited",
+      "protocols": ["WireGuard", "OpenVPN", "IKEv2"],
+      "streamingScoreNote": {
+        "en": "Reliable across multiple regions and accounts for the whole household on one subscription.",
+        "sv": "Tillförlitlig över flera regioner och täcker hela hushållet på en prenumeration."
+      },
+      "audit": {
+        "firm": "Deloitte",
+        "count": 2,
+        "latest": "2025-06",
+        "url": "https://surfshark.com/blog/no-logs-policy"
+      },
+      "transparencyReport": true,
+      "courtTested": false,
+      "courtTestedNote": {
+        "en": "No published case of legal compulsion to produce user data.",
+        "sv": "Inget publicerat fall av rättsligt tvång att lämna ut användardata."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 589, "monthlySEK": 25, "totalUSD": 59, "monthlyUSD": 2.49 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 699, "monthlySEK": 58, "totalUSD": 70, "monthlyUSD": 5.83 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 149, "monthlySEK": 149, "totalUSD": 15.49, "monthlyUSD": 15.49 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": false,
+      "freeTrial": true,
+      "scores": { "privacy": 9.0, "speed": 8.8, "price": 9.6, "streaming": 9.0, "easeOfUse": 9.1 },
+      "scoreBasis": {
+        "en": "Two Deloitte audits and a full RAM-only fleet, but Dutch jurisdiction places it inside 9-Eyes, so it gives up privacy points to NordVPN and Proton VPN. The price score is the second-highest in the list at 9.6: the 2-year term costs less than NordVPN, ExpressVPN or CyberGhost.",
+        "sv": "Två Deloitte-revisioner och en helt RAM-baserad flotta, men nederländsk jurisdiktion placerar den inom 9-Eyes och den tappar därför integritetspoäng mot NordVPN och Proton VPN. Prispoängen är den nästhögsta i listan, 9,6: 2-årsplanen kostar mindre än NordVPN, ExpressVPN eller CyberGhost."
+      },
+      "pros": [
+        { "en": "Unlimited device policy with no per-device cap on one subscription", "sv": "Obegränsad enhetspolicy utan gräns per enhet på en enda prenumeration" },
+        { "en": "Two-year plan at 59 USD, below NordVPN, ExpressVPN or CyberGhost", "sv": "2-årsplan för 589 kr, billigare än NordVPN, ExpressVPN eller CyberGhost" },
+        { "en": "Deloitte-audited no-logs policy and 100% RAM-only servers", "sv": "Deloitte-granskad loggfri policy och 100 % RAM-servrar" },
+        { "en": "Alternate Virtual Locations and IP rotation for extra flexibility", "sv": "Virtuella alternativa platser och IP-rotation för extra flexibilitet" },
+        { "en": "Useful extras bundle in at no extra cost", "sv": "Användbara tillägg ingår utan extra kostnad" }
+      ],
+      "cons": [
+        { "en": "Dutch jurisdiction means 9-Eyes intelligence-sharing obligations apply", "sv": "Nederländsk jurisdiktion innebär att 9-Eyes-underrättelsedelning gäller" },
+        { "en": "Fewer independent audits than NordVPN or Proton VPN", "sv": "Färre oberoende revisioner än NordVPN eller Proton VPN" },
+        { "en": "Now owned by Nord Security, so it is not an independent alternative to NordVPN", "sv": "Ägs nu av Nord Security och är alltså inte ett oberoende alternativ till NordVPN" },
+        { "en": "Renewal pricing still steps up noticeably", "sv": "Förnyelsepriset stiger fortfarande märkbart" }
+      ],
+      "idealFor": {
+        "en": "Anyone paying for a family or household with more than a handful of devices, or anyone who simply wants the lowest realistic monthly cost without moving down to a smaller, less audited provider.",
+        "sv": "Alla som betalar för en familj eller ett hushåll med fler än ett halvdosin enheter, eller alla som helt enkelt vill ha lägst realistisk månadskostnad utan att gå över till en mindre, mindre granskad leverantör."
+      },
+      "verdict": {
+        "en": "Surfshark wins on arithmetic. One subscription covering every device you own at 2.49 USD a month on the two-year term is difficult to argue with, and the Deloitte audit means you are not trading privacy for the discount. Be aware that it is now part of the Nord Security group, so if the reason you avoid NordVPN is its corporate ownership, this does not solve that.",
+        "sv": "Surfshark vinner på ren aritmetik. En prenumeration som täcker alla dina enheter för 25 kr i månaden på 2-årsplanen är svår att argumentera emot, och Deloitte-revisionen betyder att du inte byter integritet mot rabatten. Var medveten om att de nu ingår i Nord Security-koncernen, så om skälet till att du undviker NordVPN är bolagets ägande löser det inte det."
+      }
+    },
+
+    {
+      "id": "expressvpn",
+      "rank": 3,
+      "name": "ExpressVPN",
+      "slug": "expressvpn",
+      "color": "#b8433a",
+      "monogram": "E",
+      "badge": { "en": "Best for speed", "sv": "Bäst hastighet" },
+      "tagline": {
+        "en": "Our highest speed score at 9.6 and our highest streaming score at 9.4 — at the highest price.",
+        "sv": "Vårt högsta hastighetsbetyg, 9,6, och vårt högsta streamingbetyg, 9,4 — till högst pris."
+      },
+      "bestFor": ["speed", "streaming", "travel", "gaming"],
+      "launchYear": 2011,
+      "headquarters": "British Virgin Islands",
+      "owner": "Kape Technologies",
+      "eyesAlliance": "none",
+      "ramOnly": true,
+      "openSourceApps": false,
+      "servers": 3000,
+      "countries": 105,
+      "devices": 8,
+      "deviceLimitType": "limited",
+      "protocols": ["Lightway", "OpenVPN", "IKEv2"],
+      "streamingScoreNote": {
+        "en": "The highest streaming score in our list, at 9.4, and the broadest catalogue coverage of the eleven.",
+        "sv": "Högsta streamingbetyget i vår lista, 9,4, och den bredaste katalogtäckningen av de elva."
+      },
+      "audit": {
+        "firm": "KPMG, PwC, Cure53",
+        "count": 6,
+        "latest": "2025-10",
+        "url": "https://www.expressvpn.com/blog/"
+      },
+      "transparencyReport": true,
+      "courtTested": true,
+      "courtTestedNote": {
+        "en": "In 2017 Turkish authorities seized servers in an assassination investigation. No customer data was produced because none was held.",
+        "sv": "2017 beslagtog turkiska myndigheter servrar i en utredning om ett attentat. Ingen kunddata producerades eftersom ingen fanns."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 1219, "monthlySEK": 51, "totalUSD": 119, "monthlyUSD": 4.96 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 1319, "monthlySEK": 110, "totalUSD": 129, "monthlyUSD": 10.75 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 189, "monthlySEK": 189, "totalUSD": 18.99, "monthlyUSD": 18.99 }
+      ],
+      "moneyBackDays": 30,
+      "freeTrial": false,
+      "freeTier": false,
+      "scores": { "privacy": 9.2, "speed": 9.6, "price": 7.2, "streaming": 9.4, "easeOfUse": 9.5 },
+      "scoreBasis": {
+        "en": "Strong on every axis except price. Its own Lightway protocol post-quantum handshake, RAM-only TrustedServer infrastructure and a real court-tested history justify the privacy score. The price score is the lowest of the top three because the 2-year term costs roughly 60% more than Surfshark's.",
+        "sv": "Stark på alla axlar utom pris. Eget Lightway-protokoll med postkvantum-handshake, RAM-baserad TrustedServer-infrastruktur och en verkligt rättsligt testad historik motiverar integritetspoängen. Prispoängen är lägst av topp tre eftersom 2-årsplanen kostar cirka 60 % mer än Surfsharks."
+      },
+      "pros": [
+        { "en": "Highest speed score in our comparison, at 9.6 out of 10", "sv": "Högsta hastighetsbetyg i vår jämförelse, 9,6 av 10" },
+        { "en": "Highest streaming score in our comparison, at 9.4 out of 10", "sv": "Högsta streamingbetyg i vår jämförelse, 9,4 av 10" },
+        { "en": "BVI jurisdiction outside all Eyes alliances", "sv": "BVI-jurisdiktion utanför alla Eyes-allianser" },
+        { "en": "Proven in court: servers seized in 2017, no data existed", "sv": "Bevisad i domstol: servrar beslagtagna 2017, ingen data fanns" },
+        { "en": "Lightway protocol includes a post-quantum key exchange", "sv": "Lightway-protokollet inkluderar postkvantum-nyckelutbyte" }
+      ],
+      "cons": [
+        { "en": "Most expensive option in this list by a wide margin", "sv": "Dyraste alternativet i listan, med god marginal" },
+        { "en": "Only 8 simultaneous devices", "sv": "Endast 8 samtidiga enheter" },
+        { "en": "Owned by Kape Technologies, which also owns CyberGhost and PIA", "sv": "Ägs av Kape Technologies, som också äger CyberGhost och PIA" },
+        { "en": "Audit reports come less often than IVPN's or TunnelBear's annual streak", "sv": "Revisionsrapporter kommer sällanare än IVPN:s eller TunnelBears årliga svit" }
+      ],
+      "idealFor": {
+        "en": "People on fast fibre or 5G who notice throughput loss, and anyone whose priority is reliable streaming without a VPN constantly being tuned.",
+        "sv": "Personer med snabbt fiber eller 5G som märker av hastighetsförlust, och alla vars prioritet är pålitlig streaming utan att en VPN ständigt måste justeras."
+      },
+      "verdict": {
+        "en": "If you measure your connection on a fast line, ExpressVPN carries the highest speed score we publish, at 9.6, and the Lightway protocol is the most technically modern of the options here. You are paying a genuine premium for that, and for most people on a normal Swedish broadband connection NordVPN or Surfshark deliver a difference you will not perceive.",
+        "sv": "Om du mäter din uppkoppling på en snabb linje är ExpressVPN bär det högsta hastighetsbetyget vi publicerar, 9,6, och Lightway-protokollet är det mest tekniskt moderna alternativet här. Du betalar en verklig premie för det, och för de flesta på en vanlig svensk bredbandsanslutning levererar NordVPN eller Surfshark en skillnad du inte kommer att uppfatta."
+      }
+    },
+
+    {
+      "id": "protonvpn",
+      "rank": 4,
+      "name": "Proton VPN",
+      "slug": "protonvpn",
+      "color": "#6d4aff",
+      "monogram": "P",
+      "badge": { "en": "Best privacy", "sv": "Bäst integritet" },
+      "tagline": {
+        "en": "Swiss jurisdiction, open-source apps and a transparency report with real numbers in it.",
+        "sv": "Schweizisk jurisdiktion, källkodsöppna appar och en transparensrapport med riktiga siffror i."
+      },
+      "bestFor": ["privacy", "open-source", "beginners", "swiss"],
+      "launchYear": 2015,
+      "headquarters": "Switzerland",
+      "owner": "Proton AG",
+      "eyesAlliance": "none",
+      "ramOnly": false,
+      "openSourceApps": true,
+      "servers": 4700,
+      "countries": 91,
+      "devices": 10,
+      "deviceLimitType": "limited",
+      "protocols": ["WireGuard", "OpenVPN", "Stealth"],
+      "streamingScoreNote": {
+        "en": "Reliable on the major platforms, though not the widest catalogue coverage in the list.",
+        "sv": "Tillförlitlig på de större plattformarna, men inte bredast katalogtäckning i listan."
+      },
+      "audit": {
+        "firm": "Securitum (no-logs) and Schellman (SOC 2)",
+        "count": 5,
+        "latest": "2025-08",
+        "url": "https://protonvpn.com/blog/no-logs-audit"
+      },
+      "transparencyReport": true,
+      "courtTested": false,
+      "courtTestedNote": {
+        "en": "Proton states it could not comply with government requests in more than 400 legal cases and publishes specific refusal counts each half-year.",
+        "sv": "Proton uppger att de inte kunnat efterleva myndighetsbegäran i över 400 rättsliga fall och publicerar specifika vägrajetal varje halvår."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 889, "monthlySEK": 37, "totalUSD": 88, "monthlyUSD": 3.68 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 949, "monthlySEK": 79, "totalUSD": 95, "monthlyUSD": 7.92 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 149, "monthlySEK": 149, "totalUSD": 15.49, "monthlyUSD": 15.49 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": true,
+      "freeTrial": false,
+      "scores": { "privacy": 9.7, "speed": 8.7, "price": 8.4, "streaming": 8.2, "easeOfUse": 9.0 },
+      "scoreBasis": {
+        "en": "The highest privacy score in the list. Open-source apps you can read, Swiss jurisdiction, five consecutive Securitum audits and a SOC 2 Type II. It loses points because the server fleet is not fully RAM-only, so log retention is enforced by policy rather than by hardware.",
+        "sv": "Högsta integritetspoäng i listan. Källkodsöppna appar du kan läsa, schweizisk jurisdiktion, fem Securitum-revisioner i rad och en SOC 2 Type II. Den tappar poäng eftersom serverflottan inte är fullt RAM-baserad, så loggning upprätthålls av policy snarare än av hårdvara."
+      },
+      "pros": [
+        { "en": "Highest privacy score in our list, with open-source apps you can verify", "sv": "Högsta integritetspoängen i vår lista, med källkodsöppna appar du kan verifiera" },
+        { "en": "Swiss jurisdiction outside the EU, US and all Eyes alliances", "sv": "Schweizisk jurisdiktion utanför EU, USA och alla Eyes-allianser" },
+        { "en": "Free tier with no monthly data cap, unlike Windscribe's 10 GB or TunnelBear's 2 GB", "sv": "Gratisnivå utan månatlig datamängd, till skillnad från Windscribes 10 GB eller TunnelBears 2 GB" },
+        { "en": "Stealth protocol works on restrictive networks that block WireGuard and OpenVPN", "sv": "Stealth-protokollet fungerar på begränsade nätverk som blockerar WireGuard och OpenVPN" },
+        { "en": "Bundles with Proton Mail and Proton Drive", "sv": "Ingår i paket med Proton Mail och Proton Drive" }
+      ],
+      "cons": [
+        { "en": "Servers are not fully RAM-only, so no-logs relies on policy plus audit", "sv": "Servrarna är inte fullt RAM-baserade, så loggfriheten vilar på policy plus revision" },
+        { "en": "Streaming catalogue is narrower than ExpressVPN or CyberGhost", "sv": "Strömkatalogen är smalare än ExpressVPNs eller CyberGhosts" },
+        { "en": "Free tier is good but rate-limited and excludes streaming", "sv": "Gratisnivån är bra men hastighetsbegränsad och saknar streaming" },
+        { "en": "10-device limit", "sv": "Gräns på 10 enheter" }
+      ],
+      "idealFor": {
+        "en": "People who want to check the source code rather than take a promise on faith, and users in countries with heavy internet censorship.",
+        "sv": "Personer som vill kontrollera källkoden i stället för att ta ett löfte på tro, och användare i länder med hård internetcensur."
+      },
+      "verdict": {
+        "en": "Proton VPN is one of four providers in this list whose clients you can read yourself, which turns the privacy question from a matter of trust into a matter of inspection. Its free tier is genuinely usable, so it is also the sensible first VPN to try before paying anyone. Choose it over NordVPN if verifiable code matters more to you than a structurally enforced no-logs claim.",
+        "sv": "Proton VPN är en av fyra leverantörer i listan vars klienter du själv kan läsa, vilket gör integritetsfrågan från en fråga om tilltro till en fråga om granskning. Dess gratisnivå är genuint användbar, så det är också det kloka första VPN:et att prova innan du betalar någon. Välj det framför NordVPN om verifierbar kod betyder mer för dig än en strukturellt genomförd loggfrihet."
+      }
+    },
+
+    {
+      "id": "cyberghost",
+      "rank": 5,
+      "name": "CyberGhost",
+      "slug": "cyberghost",
+      "color": "#1f8a70",
+      "monogram": "C",
+      "badge": { "en": "Best for beginners", "sv": "Bäst för nybörjare" },
+      "tagline": {
+        "en": "The longest money-back window in our comparison at 45 days, with servers labelled by purpose.",
+        "sv": "Längsta ångerrätt i vår jämförelse, 45 dagar, med servrar märkta efter ändamål."
+      },
+      "bestFor": ["beginners", "streaming", "budget", "large-network"],
+      "launchYear": 2011,
+      "headquarters": "Romania",
+      "owner": "Kape Technologies",
+      "eyesAlliance": "none-eu",
+      "ramOnly": true,
+      "openSourceApps": false,
+      "servers": 11690,
+      "countries": 99,
+      "devices": 7,
+      "deviceLimitType": "limited",
+      "protocols": ["WireGuard", "OpenVPN", "IKEv2"],
+      "streamingScoreNote": {
+        "en": "Dedicated streaming-optimised servers for each major service, which makes it the most forgiving option for beginners in our comparison.",
+        "sv": "Dedikerade streamingoptimerade servrar för varje stor tjänst, vilket gör det till det mest förlåtande alternativet för nybörjare i vår jämförelse."
+      },
+      "audit": {
+        "firm": "Deloitte",
+        "count": 3,
+        "latest": "2025-01",
+        "url": "https://www.cyberghostvpn.com/privacyhub/"
+      },
+      "transparencyReport": true,
+      "courtTested": false,
+      "courtTestedNote": {
+        "en": "No published case of legal compulsion to produce user data.",
+        "sv": "Inget publicerat fall av rättsligt tvång att lämna ut användardata."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 649, "monthlySEK": 27, "totalUSD": 64, "monthlyUSD": 2.69 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 749, "monthlySEK": 62, "totalUSD": 75, "monthlyUSD": 6.25 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 149, "monthlySEK": 149, "totalUSD": 15.49, "monthlyUSD": 15.49 }
+      ],
+      "moneyBackDays": 45,
+      "freeTier": false,
+      "freeTrial": false,
+      "scores": { "privacy": 8.6, "speed": 8.6, "price": 9.2, "streaming": 9.0, "easeOfUse": 9.4 },
+      "scoreBasis": {
+        "en": "Three Deloitte audits and RAM-only infrastructure give a solid privacy base, tempered by Kape Technologies ownership and Romanian EU jurisdiction. The ease-of-use score reflects the clearest labelling of any provider here: every server is named by purpose in plain language.",
+        "sv": "Tre Deloitte-revisioner och RAM-baserad infrastruktur ger en solid grund, dämpad av Kape Technologies-ägande och rumänsk EU-jurisdiktion. Användbarhetspoängen speglar den tydligaste märkningen av alla leverantörer här: varje server är namngiven efter sitt ändamål på klartext."
+      },
+      "pros": [
+        { "en": "11,690+ servers — the second-largest network in our table, after Private Internet Access", "sv": "11 690+ servrar — näst största nätverket i vår tabell, efter Private Internet Access" },
+        { "en": "45-day money-back window, the longest here, for genuinely low-risk testing", "sv": "45 dagars ångerrätt, längst här, för riskfritt testande" },
+        { "en": "Servers are labelled by purpose so you always know what to pick", "sv": "Servrarna är märkta efter ändamål så att du alltid vet vad du ska välja" },
+        { "en": "Dedicated servers for each major streaming service", "sv": "Dedikerade servrar för varje stor streamingtjänst" },
+        { "en": "Native apps for Linux, Windows, macOS, iOS and Android plus smart TV", "sv": "Inbyggda appar för Linux, Windows, macOS, iOS och Android plus smart-tv" }
+      ],
+      "cons": [
+        { "en": "Owned by Kape Technologies, which has had repeated regulatory pressure", "sv": "Ägs av Kape Technologies, som haft återkommande regulatoriskt tryck" },
+        { "en": "Only 7 simultaneous devices, the lowest of the major providers", "sv": "Endast 7 samtidiga enheter, lägst bland huvudleverantörerna" },
+        { "en": "Three audits is a thinner record than NordVPN or Proton VPN", "sv": "Tre revisioner är en tunnare dokumentation än NordVPN eller Proton VPN" },
+        { "en": "Apps are closed source", "sv": "Apparna är källkodslösa" }
+      ],
+      "idealFor": {
+        "en": "First-time VPN users, and anyone who wants a long window to change their mind after actually trying the service.",
+        "sv": "Förstågångsanvändare av VPN, och alla som vill ha ett långt fönster för att ändra sig efter att faktiskt ha provat tjänsten."
+      },
+      "verdict": {
+        "en": "CyberGhost removes the two things that stop most people: you cannot accidentally pick the wrong server, and you get 45 days to decide. For a first subscription that is a better proposition than any amount of privacy analysis. The trade-off is ownership — if Kape's record is disqualifying for you, look at Proton VPN or IVPN instead.",
+        "sv": "CyberGhost tar bort de två sakerna som stoppar de flesta: du kan inte råka välja fel server, och du får 45 dagar att bestämma dig. För en första prenumeration är det ett bättre erbjudande än någon mängd integritetsanalys. Uppoffringen är ägandet — om Kapes historik är diskvalificerande för dig, titta på Proton VPN eller IVPN i stället."
+      }
+    },
+
+    {
+      "id": "private-internet-access",
+      "rank": 6,
+      "name": "Private Internet Access",
+      "slug": "private-internet-access",
+      "color": "#c0392b",
+      "monogram": "P",
+      "badge": { "en": "Best for power users", "sv": "Bäst för avancerade" },
+      "tagline": {
+        "en": "Open-source apps, unlimited devices, port forwarding, and the only no-logs claim proven twice in US federal court.",
+        "sv": "Källkodsöppna appar, obegränsade enheter, portvidarebefordran och den enda loggfrihetspåståendet som bevisats två gånger i amerikansk federal domstol."
+      },
+      "bestFor": ["privacy", "torrenting", "devices", "power-users"],
+      "launchYear": 2010,
+      "headquarters": "United States",
+      "owner": "Kape Technologies",
+      "eyesAlliance": "5-eyes",
+      "ramOnly": true,
+      "openSourceApps": true,
+      "servers": 30000,
+      "countries": 91,
+      "devices": -1,
+      "deviceLimitType": "unlimited",
+      "protocols": ["WireGuard", "OpenVPN"],
+      "streamingScoreNote": {
+        "en": "Weaker than the dedicated streaming options. PIA has added official smart-TV apps and works for many services, but coverage is narrower.",
+        "sv": "Svagare än de dedikerade streamingalternativen. PIA har lagt till officiella smart-tv-appar och fungerar för många tjänster, men täckningen är smalare."
+      },
+      "audit": {
+        "firm": "Deloitte",
+        "count": 3,
+        "latest": "2026-01",
+        "url": "https://www.privateinternetaccess.com/blog/"
+      },
+      "transparencyReport": true,
+      "courtTested": true,
+      "courtTestedNote": {
+        "en": "Subpoenaed by US federal courts in 2016 and 2018 and produced no usable data either time. This is stronger real-world evidence than an audit, because it happened under actual legal compulsion.",
+        "sv": "Kallad inför amerikanska federala domstolar 2016 och 2018 och producerade ingen användbar data någon av gångerna. Detta är starkare verklig evidens än en revision, eftersom det skedde under faktiskt rättsligt tvång."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 36, "term": { "en": "3 years", "sv": "3 år" }, "totalSEK": 589, "monthlySEK": 16, "totalUSD": 59, "monthlyUSD": 1.64 },
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 699, "monthlySEK": 29, "totalUSD": 69, "monthlyUSD": 2.90 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 129, "monthlySEK": 129, "totalUSD": 12.95, "monthlyUSD": 12.95 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": false,
+      "freeTrial": false,
+      "scores": { "privacy": 8.8, "speed": 8.2, "price": 9.4, "streaming": 7.0, "easeOfUse": 8.4 },
+      "scoreBasis": {
+        "en": "Open-source apps, a Deloitte audit history and two genuine court tests. US 5-Eyes jurisdiction caps the privacy score because a US provider can be compelled to cooperate in ways Panama or Switzerland providers cannot. The 3-year price is the cheapest term in this list.",
+        "sv": "Källkodsöppna appar, Deloitte-revisionshistorik och två verkliga domstolspröv. Amerikansk 5-Eyes-jurisdiktion takar integritetspoängen eftersom en amerikansk leverantör kan tvingas samarbeta på sätt som leverantörer i Panama eller Schweiz inte kan. 3-årspriset är det billigaste avtalet i listan."
+      },
+      "pros": [
+        { "en": "Proven no-logs claim twice in US federal court, in 2016 and 2018", "sv": "Bevisad loggfrihet två gånger i amerikansk federal domstol, 2016 och 2018" },
+        { "en": "3 years for 59 USD total — the lowest monthly price in our table", "sv": "3 år för 589 kr totalt — lägsta månadspriset i vår tabell" },
+        { "en": "Unlimited simultaneous devices and open-source apps", "sv": "Obegränsat antal samtidiga enheter och källkodsöppna appar" },
+        { "en": "One of the few providers that still supports port forwarding for incoming traffic", "sv": "En av få leverantörer som fortfarande stöder portvidarebefordran för inkommande trafik" },
+        { "en": "Token-based system for separating recurring and one-off payments", "sv": "Tokenbaserat system för att separera återkommande och engångsbetalningar" }
+      ],
+      "cons": [
+        { "en": "US jurisdiction means 5-Eyes obligations and the greatest exposure to legal compulsion in our list", "sv": "Amerikansk jurisdiktion innebär 5-Eyes-skyldigheter och störst exponering för rättsligt tvång i listan" },
+        { "en": "Owned by Kape Technologies", "sv": "Ägs av Kape Technologies" },
+        { "en": "Streaming unblocking is narrower than dedicated competitors", "sv": "Upplåsning av streaming är smalare än dedikerade konkurrenter" },
+        { "en": "Interface is powerful but not beginner-friendly", "sv": "Gränssnittet är kraftfullt men inte nybörjarvänligt" }
+      ],
+      "idealFor": {
+        "en": "People who torrent, need incoming connections, run many devices, or want open-source software and court-tested privacy evidence more than a polished interface.",
+        "sv": "Personer som torrentar, behöver inkommande anslutningar, kör många enheter eller vill ha källkodsöppna appar och rättsligt testad integritetsevidents mer än ett polerat gränssnitt."
+      },
+      "verdict": {
+        "en": "The most interesting evidence story in this list. An audit tells you a system was configured correctly the day it was inspected; two federal subpoenas tell you the data did not exist when the government actually asked. What you give up for that is jurisdiction: a US-based provider lives under laws that can force cooperation. For torrenting and power use specifically, PIA remains hard to beat.",
+        "sv": "Den mest intressanta bevisbilden i listan. En revision berättar att ett system var korrekt konfigurerat den dag det granskades; två federala kallelser berättar att datan inte fanns när regeringen faktiskt frågade. Det du ger upp för det är jurisdiktion: en amerikansk leverantör lever under lagar som kan tvinga samarbete. För torrenting och avancerad användning förblir PIA svårt att slå."
+      }
+    },
+
+    {
+      "id": "ivpn",
+      "rank": 9,
+      "name": "IVPN",
+      "slug": "ivpn",
+      "color": "#0e7c7b",
+      "monogram": "I",
+      "badge": { "en": "Best transparency", "sv": "Bäst transparens" },
+      "tagline": {
+        "en": "The most transparent provider we found: named ownership, seven annual audits and monthly reporting.",
+        "sv": "Den mest transparenta leverantören vi hittat: namngiven ägare, sju årliga revisioner och månatlig rapportering."
+      },
+      "bestFor": ["privacy", "open-source", "transparency", "payment-anonymity"],
+      "launchYear": 2006,
+      "headquarters": "Gibraltar",
+      "owner": "Independent, publicly named",
+      "eyesAlliance": "none",
+      "ramOnly": true,
+      "openSourceApps": true,
+      "servers": 140,
+      "countries": 30,
+      "devices": 2,
+      "deviceLimitType": "limited",
+      "protocols": ["WireGuard", "OpenVPN", "IPSec"],
+      "streamingScoreNote": {
+        "en": "Weak. IVPN deliberately does not chase streaming catalogues, which is one of the reasons its server network is so small.",
+        "sv": "Svagt. IVPN medvetet konkurrerar inte om strömkataloger, vilket är en av anledningarna till att servernätverket är så litet."
+      },
+      "audit": {
+        "firm": "Cure53",
+        "count": 7,
+        "latest": "2025-11",
+        "url": "https://www.ivpn.net/blog/ivpn-cure53-security-audit"
+      },
+      "transparencyReport": true,
+      "courtTested": false,
+      "courtTestedNote": {
+        "en": "Publishes a monthly transparency report with request-by-request detail.",
+        "sv": "Publicerar en månatlig transparensrapport med detaljer begäran för begäran."
+      },
+      "anonymousSignup": true,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 999, "monthlySEK": 42, "totalUSD": 99, "monthlyUSD": 4.12 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 1049, "monthlySEK": 87, "totalUSD": 104, "monthlyUSD": 8.67 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 159, "monthlySEK": 159, "totalUSD": 15.99, "monthlyUSD": 15.99 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": false,
+      "freeTrial": true,
+      "scores": { "privacy": 9.3, "speed": 7.8, "price": 7.2, "streaming": 6.0, "easeOfUse": 8.2 },
+      "scoreBasis": {
+        "en": "Seven consecutive annual Cure53 audits with full published reports is the strongest published audit practice in this list, plus anonymous signup and Monero payment. Scores are capped by a small network of 140 servers, only 30 countries and a 2-device limit.",
+        "sv": "Sju årliga Cure53-revisioner i rad med fullt publicerade rapporter är den starkaste publicerade revisionspraxisen i listan, plus anonym registrering och Monero-betalning. Poängen begränsas av ett nätverk på 140 servrar, 30 länder och en gräns på 2 enheter."
+      },
+      "pros": [
+        { "en": "Seven consecutive annual Cure53 audits, with the full reports published", "sv": "Sju årliga Cure53-revisioner i rad med fullt publicerade rapporter" },
+        { "en": "Full audit reports published, not just summaries", "sv": "Fullständiga revisionsrapporter publiceras, inte bara sammanfattningar" },
+        { "en": "Named, publicly listed ownership and team", "sv": "Namngiven, offentligt listad ägare och team" },
+        { "en": "Optional anonymous signup and Monero payment", "sv": "Valfri anonym registrering och Monero-betalning" },
+        { "en": "Monthly transparency report with request-level detail", "sv": "Månatlig transparensrapport med detaljer på begärandenivå" }
+      ],
+      "cons": [
+        { "en": "Only 140 servers in 30 countries — by far the smallest network here", "sv": "Endast 140 servrar i 30 länder — klart minsta nätverket här" },
+        { "en": "Only 2 simultaneous devices, with an extra cost for more", "sv": "Endast 2 samtidiga enheter, med extra kostnad för fler" },
+        { "en": "No meaningful streaming unblocking", "sv": "Ingen meningsfull upplåsning av streaming" },
+        { "en": "Noticeably slower than the major providers on long-distance routes", "sv": "Märkbart långsammare än huvudleverantörerna på långa avstånd" }
+      ],
+      "idealFor": {
+        "en": "People for whom audit evidence and anonymous payment matter more than server count, throughput or streaming.",
+        "sv": "Personer för vilka revisionsbevis och anonym betalning betyder mer än serverantal, genomströmning eller streaming."
+      },
+      "verdict": {
+        "en": "IVPN is what a VPN looks like when the priority is verifiability rather than scale. Seven straight years of full Cure53 reports is a genuinely better transparency record than any of the larger brands, and it accepts Monero. The trade-off is blunt: 140 servers and a two-device limit. If you need to unblock a streaming catalogue, this is the wrong tool.",
+        "sv": "IVPN är vad en VPN ser ut när prioriteringen är verifierbarhet snarare än skala. Sju år i rad med fullständiga Cure53-rapporter är en genuint bättre transparensdokumentation än någon av de större varumärkena, och de accepterar Monero. Uppoffringen är rak: 140 servrar och en gräns på två enheter. Om du behöver låsa upp en strömkatalog är detta fel verktyg."
+      }
+    },
+
+    {
+      "id": "windscribe",
+      "rank": 7,
+      "name": "Windscribe",
+      "slug": "windscribe",
+      "color": "#6b3fa0",
+      "monogram": "W",
+      "badge": { "en": "Best free tier", "sv": "Bäst gratisnivå" },
+      "tagline": {
+        "en": "A free tier with a 10 GB monthly allowance and unlimited devices, plus a plan you build yourself.",
+        "sv": "En gratisnivå med 10 GB per månad och obegränsade enheter, plus en plan du bygger själv."
+      },
+      "bestFor": ["budget", "free", "devices", "casual"],
+      "launchYear": 2016,
+      "headquarters": "Canada",
+      "owner": "Independent",
+      "eyesAlliance": "5-eyes",
+      "ramOnly": false,
+      "openSourceApps": false,
+      "servers": 500,
+      "countries": 60,
+      "devices": -1,
+      "deviceLimitType": "unlimited",
+      "protocols": ["WireGuard", "OpenVPN", "IKEv2"],
+      "streamingScoreNote": {
+        "en": "Functional on some services. A turning-wheel feature randomly rotates your IP before connecting, which helps with some blocks and frustrates others.",
+        "sv": "Fungerar på vissa tjänster. En vridhjulfunktion roterar slumpmässigt din IP före anslutning, vilket hjälper mot vissa blockeringar och frustrerar andra."
+      },
+      "audit": {
+        "firm": "Leviathan Security Group",
+        "count": 2,
+        "latest": "2022-03",
+        "url": "https://windscribe.com/transparency"
+      },
+      "transparencyReport": true,
+      "courtTested": false,
+      "courtTestedNote": {
+        "en": "In 2021 Ukrainian authorities seized servers and issued an ultimatum to hand over data, which Windscribe says it refused. Its app-level audit is the older of the two on file.",
+        "sv": "2021 beslagtog ukrainska myndigheter servrar och utfärdade en ultimatum om att lämna över data, vilket Windscribe uppger att de nekade till. Appnivårevisionen är den äldsta av de två som finns."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": false,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 549, "monthlySEK": 23, "totalUSD": 54, "monthlyUSD": 2.25 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 599, "monthlySEK": 50, "totalUSD": 60, "monthlyUSD": 5.00 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 99, "monthlySEK": 99, "totalUSD": 9.99, "monthlyUSD": 9.99 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": true,
+      "freeTrial": false,
+      "freeGbPerMonth": 10,
+      "scores": { "privacy": 8.2, "speed": 7.9, "price": 9.8, "streaming": 7.4, "easeOfUse": 8.6 },
+      "scoreBasis": {
+        "en": "The best price score in the list, because the free tier is genuinely usable and paid plans are among the cheapest. Privacy is limited by Canadian 5-Eyes jurisdiction, persistent-disk infrastructure rather than RAM-only, and no recent infrastructure audit — the newest on file covers the apps from 2022.",
+        "sv": "Högst prispoäng i listan eftersom gratisnivån är genuint användbar och betalda planer hör till de billigaste. Integriteten begränsas av kanadensisk 5-Eyes-jurisdiktion, beständig disk-infrastruktur i stället för RAM, och avsaknad av nyligen infrastrukturrevision — den senaste på fil gäller apparna från 2022."
+      },
+      "pros": [
+        { "en": "Genuinely usable free tier with 10 GB per month and unlimited devices", "sv": "Genuint användbar gratisnivå med 10 GB per månad och obegränsade enheter" },
+        { "en": "Cheapest paid 2-year plan in this comparison", "sv": "Billigaste betalda 2-årsplanen i denna jämförelse" },
+        { "en": "Unlimited devices on both the free and paid tiers", "sv": "Obegränsade enheter på både gratis- och betalnivå" },
+        { "en": "Build-your-own plan lets you pay only for the locations you add", "sv": "Bygg-din-eigen-plan låter dig betala bara för de platser du lägger till" },
+        { "en": "Turning wheel and GPS spoofing are unusual extras", "sv": "Vridhjul och GPS-spoofing är ovanliga tillägg" }
+      ],
+      "cons": [
+        { "en": "Servers run on persistent disks, so a no-logs claim is harder to enforce structurally", "sv": "Servrarna körs på beständiga diskar, vilket gör en loggfri policy svårare att genomföra strukturellt" },
+        { "en": "No independent infrastructure audit since 2022", "sv": "Ingen oberoende infrastrukturrevision sedan 2022" },
+        { "en": "Canadian 5-Eyes jurisdiction", "sv": "Kanadensisk 5-Eyes-jurisdiktion" },
+        { "en": "Smallest streaming reliability of the mid-tier options", "sv": "Svagast strömtillförlitlighet av mellanalternativen" }
+      ],
+      "idealFor": {
+        "en": "Occasional VPN users who travel a few times a year, students on a tight budget, and anyone who wants unlimited devices without paying anything.",
+        "sv": "Sporadiska VPN-användare som reser några gånger per år, studenter med tight budget och alla som vill ha obegränsade enheter utan att betala något."
+      },
+      "verdict": {
+        "en": "The right answer for anyone whose VPN use is occasional. Ten gigabytes a month covers browsing, banking and travel, and the free tier does not log you out after a data cap in the way most do. If you want a VPN you never think about and never pay for, Windscribe is the one we point at first.",
+        "sv": "Rätt svar för alla vars VPN-användning är sporadisk. Tio gigabyte per månad täcker surf, bankärenden och resor, och gratisnivån loggar inte ut dig efter en datagräns som de flesta gör. Om du vill ha en VPN du aldrig tänker på och aldrig betalar för är Windscribe den vi pekar på först."
+      }
+    },
+
+    {
+      "id": "mullvad",
+      "rank": 10,
+      "name": "Mullvad",
+      "slug": "mullvad",
+      "color": "#2c3e50",
+      "monogram": "M",
+      "badge": { "en": "Best anonymity", "sv": "Bäst anonymitet" },
+      "tagline": {
+        "en": "Swedish, independent, no account email, no subscription tier — and a police raid that came up empty.",
+        "sv": "Svenskt, oberoende, ingen e-postadress, ingen prenumerationsnivå — och en polisrazzia som inte gav resultat."
+      },
+      "bestFor": ["anonymity", "privacy", "swedish", "simplicity"],
+      "launchYear": 2007,
+      "headquarters": "Sweden",
+      "owner": "Independent",
+      "eyesAlliance": "14-eyes",
+      "ramOnly": true,
+      "openSourceApps": true,
+      "servers": 700,
+      "countries": 40,
+      "devices": 5,
+      "deviceLimitType": "limited",
+      "protocols": ["WireGuard", "OpenVPN"],
+      "streamingScoreNote": {
+        "en": "Weak by design. Mullvad does not maintain streaming catalogues and tells you so plainly.",
+        "sv": "Svagt av design. Mullvad underhåller inte strömkataloger och säger det rakt ut."
+      },
+      "audit": {
+        "firm": "Cure53 and Assured AB",
+        "count": 6,
+        "latest": "2026-02",
+        "url": "https://mullvad.net/en/blog"
+      },
+      "transparencyReport": true,
+      "courtTested": true,
+      "courtTestedNote": {
+        "en": "In April 2023 Swedish police arrived at Mullvad's office with a search warrant and left with nothing, because nothing was retained. This is the strongest real-world test of a no-logs claim available.",
+        "sv": "I april 2023 kom svensk polis till Mullvads kontor med en bevismäkning och lämnade tomhänta, eftersom inget fanns kvar. Detta är den starkaste verkliga testet av ett loggfrihetspåstående som finns."
+      },
+      "anonymousSignup": true,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 55, "monthlySEK": 55, "totalUSD": 5.00, "monthlyUSD": 5.00 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": false,
+      "freeTrial": false,
+      "flatMonthlyPrice": true,
+      "scores": { "privacy": 9.4, "speed": 8.0, "price": 6.8, "streaming": 4.0, "easeOfUse": 7.6 },
+      "scoreBasis": {
+        "en": "Anonymous signup, cash and crypto payment, a small owned infrastructure, open-source clients and the 2023 police raid. Scores are held down by a flat $5/month with no long-term discount, a 700-server network, Swedish 14-Eyes membership, and effectively no streaming support.",
+        "sv": "Anonym registrering, kontant- och kryptobetalning, en liten ägd infrastruktur, källkodsöppna klienter och razzian 2023. Poängen hålls nere av en fast 55 kr/månad utan långtidsrabatt, ett nätverk på 700 servrar, svenskt 14-Eyes-medlemskap och i praktiken ingen streaming."
+      },
+      "pros": [
+        { "en": "No email address required — you get an account number and nothing else", "sv": "Ingen e-postadress krävs — du får ett kontonummer och inget annat" },
+        { "en": "Pays in cash, by post, or in cryptocurrency including Monero", "sv": "Betalar kontant, per post eller i kryptovaluta inklusive Monero" },
+        { "en": "Swedish police raided the office in 2023 and found no data", "sv": "Svensk polis razzade kontoret 2023 och fann ingen data" },
+        { "en": "One transparent price for five devices, no upsells or long-term lock-in", "sv": "Ett transparent pris för fem enheter, inga tillägg eller långa bindningar" },
+        { "en": "Open-source clients and publishes per-server ownership information", "sv": "Källkodsöppna klienter och publicerar ägandeförhållande per server" }
+      ],
+      "cons": [
+        { "en": "Effectively no streaming unblocking, and this is deliberate", "sv": "I praktiken ingen upplåsning av streaming, och det är medvetet" },
+        { "en": "Flat $5/month is expensive if you only need a VPN occasionally", "sv": "Fasta 55 kr/månad är dyrt om du bara behöver en VPN ibland" },
+        { "en": "Small network of about 700 servers across 40 countries", "sv": "Litet nätverk på cirka 700 servrar i 40 länder" },
+        { "en": "Port forwarding was discontinued for all users in 2023", "sv": "Portvidarebefordran drogs in för alla användare 2023" }
+      ],
+      "idealFor": {
+        "en": "People who want to leave as little trace as possible: no account email, no payment identity link, no long-term commercial relationship.",
+        "sv": "Personer som vill lämna så lite spår som möjligt: ingen kontoadress, ingen koppling till betalningsidentitet, inget långsiktigt kommersiellt förhållande."
+      },
+      "verdict": {
+        "en": "Mullvad's combination is unique in this list: no email, cash by post, one flat price, and a Swedish address you can physically visit. In 2023 police did exactly that and left with nothing. If your threat model involves not wanting a subscription relationship that a company can hold on to, this is the most honest design in our comparison — but $5 a month with no streaming support is not for casual use.",
+        "sv": "Mullvads kombination är unik i den här listan: ingen e-post, kontant per post, ett fast pris och en svensk adress du kan besöka fysiskt. 2023 gjorde polis precis det och lämnade tomhänta. Om din hotbild innefattar att inte vilja ha en prenumerationsrelation som ett bolag kan hålla kvar är detta den mest ärliga konstruktionen i vår jämförelse — men 55 kr i månaden utan streamingstöd är inte för sporadisk användning."
+      }
+    },
+
+    {
+      "id": "tunnelbear",
+      "rank": 8,
+      "name": "TunnelBear",
+      "slug": "tunnelbear",
+      "color": "#e26a3d",
+      "monogram": "T",
+      "badge": { "en": "Best simple apps", "sv": "Bäst enkla appar" },
+      "tagline": {
+        "en": "The most approachable apps of the eleven, a free tier, and the most annual audits of any provider we list.",
+        "sv": "De mest lättillkomliga apparna av de elva, en gratisnivå och flest årliga revisioner av alla leverantörer vi listar."
+      },
+      "bestFor": ["beginners", "free", "simplicity", "audits"],
+      "launchYear": 2014,
+      "headquarters": "Canada",
+      "owner": "McAfee Corp",
+      "eyesAlliance": "5-eyes",
+      "ramOnly": false,
+      "openSourceApps": false,
+      "servers": 5000,
+      "countries": 20,
+      "devices": 5,
+      "deviceLimitType": "limited",
+      "protocols": ["WireGuard", "OpenVPN", "IKEv2"],
+      "streamingScoreNote": {
+        "en": "Works on several major platforms but does not attempt wide catalogue coverage.",
+        "sv": "Fungerar på flera stora plattformar men försöker inte täcka breda kataloger."
+      },
+      "audit": {
+        "firm": "Cure53",
+        "count": 9,
+        "latest": "2025-10",
+        "url": "https://tunnelbear.com/en/blog/security-audit"
+      },
+      "transparencyReport": true,
+      "courtTested": false,
+      "courtTestedNote": {
+        "en": "No published case of legal compulsion to produce user data.",
+        "sv": "Inget publicerat fall av rättsligt tvång att lämna ut användardata."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": false,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 899, "monthlySEK": 37, "totalUSD": 88, "monthlyUSD": 3.67 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 949, "monthlySEK": 79, "totalUSD": 93, "monthlyUSD": 7.75 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 129, "monthlySEK": 129, "totalUSD": 12.99, "monthlyUSD": 12.99 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": true,
+      "freeTrial": false,
+      "freeGbPerMonth": 2,
+      "scores": { "privacy": 8.4, "speed": 7.6, "price": 8.0, "streaming": 7.2, "easeOfUse": 9.5 },
+      "scoreBasis": {
+        "en": "Nine annual Cure53 audits is the highest count in this list, but they audit the apps and infrastructure rather than the logging claim specifically. Canadian 5-Eyes jurisdiction and McAfee ownership hold privacy back, as does persistent-disk infrastructure.",
+        "sv": "Nio årliga Cure53-revisioner är högsta antalet i listan, men de granskar appar och infrastruktur snarare än loggfrihetspåståendet specifikt. Kanadensisk 5-Eyes-jurisdiktion och McAfee-ägande håller tillbaka integriteten, liksom beständig disk-infrastruktur."
+      },
+      "pros": [
+        { "en": "Nine consecutive annual Cure53 security audits, the highest count here", "sv": "Nio årliga Cure53-säkerhetsrevisioner i rad, högst antal här" },
+        { "en": "The most approachable apps of any provider in this list", "sv": "De mest lättillkomliga apparna av alla leverantörer i listan" },
+        { "en": "Free tier with 2 GB per month and no device limit in practice", "sv": "Gratisnivå med 2 GB per månad och i praktiken ingen enhetsgräns" },
+        { "en": "One subscription works on every major platform including browser extensions", "sv": "En prenumeration fungerar på alla stora plattformar inklusive webbläsartillägg" },
+        { "en": "Reminder system nudges you to use it, which is good for infrequent users", "sv": "Påminnelsesystem påminner dig att använda det, bra för sällan-användare" }
+      ],
+      "cons": [
+        { "en": "Owned by McAfee, a large security vendor with its own commercial interests", "sv": "Ägs av McAfee, en stor säkerhetsleverantör med egna kommersiella intressen" },
+        { "en": "Servers run on persistent disks rather than RAM-only infrastructure", "sv": "Servrarna körs på beständiga diskar i stället för RAM-infrastruktur" },
+        { "en": "Narrow country coverage at around 20 locations", "sv": "Smal landstäckning med omkring 20 platser" },
+        { "en": "Free tier is limited to 2 GB per month", "sv": "Gratisnivån är begränsad till 2 GB per månad" }
+      ],
+      "idealFor": {
+        "en": "People who find VPN software intimidating, and users who want a short free trial before deciding whether privacy tooling is for them.",
+        "sv": "Personer som tycker att VPN-programvara är skrämmande, och användare som vill ha en kort gratisperiod innan de bestämmer sig för om integritetsverktyg är något för dem."
+      },
+      "verdict": {
+        "en": "TunnelBear is the provider to hand to someone who does not want to think about VPN configuration. The apps are the most approachable of the eleven, the free tier lets you test without a card, and the nine-year audit streak is genuinely impressive. McAfee's ownership and persistent-disk infrastructure are the price of that accessibility.",
+        "sv": "TunnelBear är leverantören du ger till någon som inte vill tänka på VPN-konfiguration. Apparna är de mest lättillkomliga av de elva, gratisnivån låter dig testa utan kort, och nioårsrevisionssviten är genuint imponerande. McAfees ägande och beständig disk-infrastruktur är priset för den tillgängligheten."
+      }
+    }    ,
+    {
+      "id": "adguard-vpn",
+      "rank": 11,
+      "name": "AdGuard VPN",
+      "slug": "adguard-vpn",
+      "color": "#2e9e62",
+      "monogram": "A",
+      "badge": { "en": "Built-in ad blocking", "sv": "Inbyggd annonsblockering" },
+      "tagline": {
+        "en": "Cyprus jurisdiction outside the Eyes alliances, an open-source protocol, and ad blocking bundled into the VPN — with no published no-logs audit yet.",
+        "sv": "Cypernjurisdiktion utanför Eyes-allianserna, ett protokoll med öppen källkod och annonsblockering inbyggd i VPN:en — men ännu ingen publicerad loggfrihetsrevision."
+      },
+      "bestFor": ["budget", "devices", "free", "families"],
+      "launchYear": 2020,
+      "headquarters": "Cyprus",
+      "owner": "AdGuard Software Limited",
+      "eyesAlliance": "none-eu",
+      "ramOnly": false,
+      "openSourceApps": false,
+      "servers": null,
+      "countries": 62,
+      "devices": 10,
+      "deviceLimitType": "limited",
+      "protocols": ["TrustTunnel"],
+      "streamingScoreNote": {
+        "en": "Third-party results are mixed: some tests unblock the major catalogues, others report unreliable access. Our streaming score for AdGuard VPN is 7.8.",
+        "sv": "Tredjepartsresultat är blandade: vissa tester låser upp de stora katalogerna, andra rapporterar opålitlig åtkomst. Vårt streamingbetyg för AdGuard VPN är 7,8."
+      },
+      "audit": {
+        "firm": "No published audit",
+        "count": 0,
+        "latest": "—",
+        "url": "https://adguard-vpn.com/en/transparency.html"
+      },
+      "transparencyReport": true,
+      "courtTested": false,
+      "courtTestedNote": {
+        "en": "No published case of legal compulsion to produce user data.",
+        "sv": "Inget publicerat fall av rättsligt tvång att lämna ut användardata."
+      },
+      "anonymousSignup": false,
+      "cryptoPayment": true,
+      "pricing": [
+        { "termMonths": 24, "term": { "en": "2 years", "sv": "2 år" }, "totalSEK": 727, "monthlySEK": 30, "totalUSD": 71.76, "monthlyUSD": 2.99 },
+        { "termMonths": 12, "term": { "en": "1 year", "sv": "1 år" }, "totalSEK": 485, "monthlySEK": 40, "totalUSD": 47.88, "monthlyUSD": 3.99 },
+        { "termMonths": 1, "term": { "en": "1 month", "sv": "1 månad" }, "totalSEK": 122, "monthlySEK": 122, "totalUSD": 11.99, "monthlyUSD": 11.99 }
+      ],
+      "moneyBackDays": 30,
+      "freeTier": true,
+      "freeTrial": false,
+      "freeGbPerMonth": 3,
+      "scores": { "privacy": 8.1, "speed": 8.3, "price": 9.0, "streaming": 7.8, "easeOfUse": 8.8 },
+      "scoreBasis": {
+        "en": "No published no-logs audit holds the privacy score down, despite Cyprus jurisdiction outside the Eyes alliances and a published transparency report. The TrustTunnel protocol code was published in January 2026, but the consumer apps are closed and the server fleet is not stated to be RAM-only. Price sits near NordVPN's two-year term at 71.76 USD for 10 devices. Speed and streaming are editorial estimates, not our own benchmarks.",
+        "sv": "Ingen publicerad loggfrihetsrevision håller tillbaka integritetspoängen, trots Cypernjurisdiktion utanför Eyes-allianserna och en publicerad transparensrapport. Koden för TrustTunnel-protokollet publicerades i januari 2026, men konsumentapparna är slutna och serverflottan uppges inte vara RAM-baserad. Priset ligger nära NordVPN:s tvåårsplan med 71,76 USD för 10 enheter. Hastighet och streaming är redaktionella uppskattningar, inte våra egna mätningar."
+      },
+      "pros": [
+        { "en": "Cyprus jurisdiction outside the 5/9/14-Eyes alliances, with a published transparency report", "sv": "Cypernjurisdiktion utanför 5/9/14-Eyes-allianserna, med en publicerad transparensrapport" },
+        { "en": "TrustTunnel protocol code published in January 2026 for anyone to inspect", "sv": "Koden för TrustTunnel-protokollet publicerad i januari 2026 för vem som helst att granska" },
+        { "en": "Two years for 71.76 USD with 10 devices and ad blocking included", "sv": "Två år för 71,76 USD med 10 enheter och annonsblockering inkluderad" },
+        { "en": "Free tier with 3 GB per month for trying before paying", "sv": "Gratisnivå med 3 GB per månad för att prova innan du betalar" },
+        { "en": "Ad and tracker blocking plus personal DNS bundled with the subscription", "sv": "Annons- och spårningsblockering plus personlig DNS ingår i prenumerationen" }
+      ],
+      "cons": [
+        { "en": "No published no-logs audit, so the logging claim rests on policy alone", "sv": "Ingen publicerad loggfrihetsrevision, så loggfrihetspåståendet vilar enbart på policy" },
+        { "en": "TrustTunnel only — no OpenVPN or WireGuard for routers and manual setups", "sv": "Endast TrustTunnel — ingen OpenVPN eller WireGuard för routrar och manuella installationer" },
+        { "en": "Streaming results are mixed across independent tests", "sv": "Streamingresultaten är blandade mellan oberoende tester" },
+        { "en": "Monthly plan is non-refundable; the 30-day guarantee covers 1-year and 2-year terms", "sv": "Månadsplanen är inte återbetalningsbar; 30 dagars garantin gäller 1- och 2-årsplaner" }
+      ],
+      "idealFor": {
+        "en": "People who already use AdGuard products and want the VPN, the ad blocking and the DNS in one subscription — or anyone who wants a low two-year price without giving up 10 devices.",
+        "sv": "Personer som redan använder AdGuards produkter och vill ha VPN, annonsblockering och DNS i en prenumeration — eller alla som vill ha ett lågt tvåårspris utan att ge upp 10 enheter."
+      },
+      "verdict": {
+        "en": "AdGuard VPN is a fair budget choice rather than a privacy leader. The price is genuinely low on the two-year term, the Cyprus jurisdiction is clean, and the bundled ad blocking is useful — but the no-logs claim has no independent audit behind it, and the apps cannot be read the way Proton VPN's or Mullvad's can. If audit evidence is what you are buying, buy that; if you want a cheap tunnel with extras, this is reasonable value.",
+        "sv": "AdGuard VPN är ett rimligt budgetval snarare än en integritetsledare. Priset är genuint lågt på tvåårsplanen, Cypernjurisdiktionen är ren och den medföljande annonsblockeringen är användbar — men loggfrihetspåståendet har ingen oberoende revision bakom sig, och apparna går inte att läsa som Proton VPN:s eller Mullvads. Om det är revisionsbevis du köper, köp det; om du vill ha en billig tunnel med tillägg är detta rimligt värde."
+      }
+    }
+  ],
+
+  "useCases": [
+    { "id": "everyone",    "en": "For most people",           "sv": "För de flesta",              "slug": "everyone" },
+    { "id": "privacy",     "en": "Maximum privacy",           "sv": "Maximal integritet",         "slug": "privacy" },
+    { "id": "speed",       "en": "Best for speed",            "sv": "Bäst för hastighet",       "slug": "speed" },
+    { "id": "streaming",   "en": "Streaming and TV",          "sv": "Streaming och tv",           "slug": "streaming" },
+    { "id": "budget",      "en": "Lowest price",              "sv": "Lägst pris",                 "slug": "budget" },
+    { "id": "devices",     "en": "Many devices",              "sv": "Många enheter",              "slug": "devices" },
+    { "id": "beginners",   "en": "Beginners",                 "sv": "Nybörjare",                  "slug": "beginners" },
+    { "id": "torrenting",  "en": "Torrenting",                "sv": "Torrenting",                 "slug": "torrenting" },
+    { "id": "anonymity",   "en": "Anonymity",                 "sv": "Anonymitet",                 "slug": "anonymity" },
+    { "id": "travel",      "en": "Travel",                    "sv": "Resor",                      "slug": "travel" },
+    { "id": "gaming",      "en": "Gaming",                    "sv": "Spel",                       "slug": "gaming" },
+    { "id": "open-source", "en": "Open-source apps",         "sv": "Källkodsöppna appar",        "slug": "open-source" },
+    { "id": "families",    "en": "Families and households",   "sv": "Familjer och hushåll",       "slug": "families" },
+    { "id": "free",        "en": "Free tier",                 "sv": "Gratisnivå",                 "slug": "free" },
+    { "id": "power-users", "en": "Power users",               "sv": "Avancerade användare",       "slug": "power-users" },
+    { "id": "simplicity",  "en": "Simplicity",                "sv": "Enkelhet",                   "slug": "simplicity" },
+    { "id": "transparency","en": "Transparency",              "sv": "Transparens",                "slug": "transparency" },
+    { "id": "swedish",     "en": "Sweden-based",              "sv": "Sverigebaserat",           "slug": "swedish" },
+    { "id": "large-network","en": "Largest network",          "sv": "Störst nätverk",             "slug": "large-network" },
+    { "id": "payment-anonymity","en": "Anonymous payment",     "sv": "Anonym betalning",           "slug": "anonymous-payment" },
+    { "id": "audits",      "en": "Most audits",               "sv": "Flest revisioner",          "slug": "audits" },
+    { "id": "free-trial",  "en": "Free trial",                "sv": "Gratisperiod",               "slug": "free-trial" }
+  ]
+}

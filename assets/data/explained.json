@@ -1,0 +1,1449 @@
+{
+  "_meta": {
+    "schemaVersion": 1,
+    "updated": "2026-10-05",
+    "note": "Informational explainers for /vpn-explained/<slug>/. One entry per slug holding both languages, so the hreflang pair cannot drift. Copy rules: no claim the table or the method page cannot back, and inline links use the {{...}} tokens that tools/build.py resolves."
+  },
+  "topics": [
+    {
+      "slug": "what-is-a-vpn",
+      "icon": "shield",
+      "published": "2026-10-05",
+      "reviews": [
+        "nordvpn",
+        "expressvpn"
+      ],
+      "guides": [
+        "privacy"
+      ],
+      "en": {
+        "title": "What Is a VPN and How Does It Work?",
+        "desc": "A VPN encrypts your connection to a server you choose, so the internet sees that server's address instead of yours. What that does, and what it never does.",
+        "lede": "A VPN is an encrypted tunnel between your device and a server you pick. Everything you ask for on the far side of that tunnel is requested by the server's address, not by yours — which fixes a smaller problem than the adverts claim, and a real one.",
+        "sections": [
+          {
+            "h2": "What the tunnel actually is",
+            "p": [
+              "A VPN is software — an app on your phone, a client on your laptop, or a profile on your router — that opens an encrypted connection to a server run by the VPN provider. The two ends agree on keys in the first second of the connection, and from then on everything you send is wrapped before it leaves your device and unwrapped only at that server.",
+              "Your device keeps its normal network address; the tunnel sits on top of it. Your internet provider still carries your packets, but they now go to one destination only: the VPN server. From the outside your computer looks like a second machine sitting next to that server, in whatever city and country you picked."
+            ]
+          },
+          {
+            "h2": "What changes the moment you connect",
+            "p": [
+              "Four things, and they are worth separating. The address a website sees becomes the server's address. Your DNS lookups travel inside the tunnel instead of to your internet provider's resolvers. The traffic between you and the VPN server is unreadable to anyone in the middle. And every request from your device now leaves from the same source, so sites can group your visits under one address.",
+              "That last point cuts both ways. The server's address is shared with everyone else using it at that moment, so a streaming service sees a crowd rather than a person — which is exactly why most of them try to block it, and why your own traffic blends into a queue of other people's.",
+              "There is one more change people notice first: pages stop asking whether they may know your location, because the answer they get back describes the server. Everything the site infers from the address — country, city, roughly which part of a town — now describes the VPN server rather than your street."
+            ]
+          },
+          {
+            "h2": "Who can still see what",
+            "p": [
+              "A VPN moves one party out of the middle and puts another one in. Which party that is decides how much the tunnel is worth to you:",
+              "None of these four see the same picture, and confusing them is how most VPN advice goes wrong."
+            ],
+            "list": [
+              "Your internet provider: that you are connected to a VPN server, its address, and roughly how much data moves. Not which sites you visit.",
+              "The VPN provider: every destination you ask for, tied to your account, unless it runs a no-logs policy that has survived an audit.",
+              "The site you visit: the VPN server's address, plus your logins, your cookies and your browser as usual.",
+              "Anyone on the same wifi: nothing readable. The tunnel was encrypted before it touched the network."
+            ]
+          },
+          {
+            "h2": "What a VPN does not do",
+            "p": [
+              "It does not make you anonymous. The sites you sign into still know who you are, your browser still prints a fingerprint, and an account you have held for ten years does not become new because the address changed.",
+              "It does not protect you from the rest of the internet's bad luck either: phishing, malware, a reused password, a breach at the shop you bought from. And it does not hide you from the VPN provider itself — the provider is now the party in the middle, which is why an auditable no-logs policy matters more than a feature list.",
+              "It does not speed anything up. Our speed component is an estimate read off the architecture — protocol support, server density, distance — rather than a benchmark we ran ourselves, and {{method}} says so in plain words."
+            ]
+          },
+          {
+            "h2": "How to judge one in five minutes",
+            "p": [
+              "If you check five things, check these: does the provider publish an audit of its no-logs policy with a named firm and a date, and are the servers RAM-only so that nothing sits on a disk waiting to be seized. Which country the company answers to. Whether it supports WireGuard, which is the modern default. And what the plan costs in the second year, not the first — the discount almost always ends.",
+              "All eleven providers we cover are compared on exactly those components, with the weights printed next to them: {{compare}}. If privacy is the only job you have, {{guide:privacy}} re-weights the same five components for that job.",
+              "One more question earns its place: what happens after the first year. Introductory pricing on a three-year plan hides the real number until it is too late to compare, so read the renewal price before the discount rather than after it — the providers in this business almost all raise the price at renewal, and the honest ones print it in the same table."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Does a VPN make me anonymous?",
+            "No. It changes the address sites see and it hides the destinations from your internet provider. Sites you are signed into still know you, your browser still fingerprints you, and the VPN provider can see where you go unless its no-logs claim has been audited. {{explain:does-vpn-make-you-anonymous|our guide to VPN anonymity}} works through the difference between a changed address and an anonymous one."
+          ],
+          [
+            "Does a VPN slow down your internet?",
+            "Always somewhat: your traffic takes an extra hop and is encrypted twice. How much depends on distance to the server, how loaded it is, and whether the tunnel uses WireGuard. {{explain:do-vpns-slow-down|our guide to VPN speed}} separates the real cause from the ones adverts blame."
+          ],
+          [
+            "Do I need a VPN at home?",
+            "On your own broadband, less often than the adverts suggest. On public wifi, on mobile data, or on a network you do not run yourself, considerably more often. {{explain:do-you-need-a-vpn-at-home|our guide to VPNs at home}} sets out which situations actually change."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Vad är en VPN och hur fungerar den?",
+        "desc": "En VPN krypterar anslutningen till en server du väljer, så internet ser serverns adress i stället för din. Vad det löser — och vad det aldrig löser.",
+        "lede": "En VPN är en krypterad tunnel mellan din enhet och en server du själv väljer. Allt du begär på andra sidan tunneln begärs av serverns adress, inte av din — vilket löser ett mindre problem än reklamen påstår, och ett verkligt.",
+        "sections": [
+          {
+            "h2": "Vad tunneln faktiskt är",
+            "p": [
+              "En VPN är programvara — en app i telefonen, en klient på datorn eller en profil i routern — som öppnar en krypterad anslutning till en server som VPN-leverantören sköter. Parterna kommer överens om nycklar under första sekunden av anslutningen, och från dess omsluts allt du skickar innan det lämnar din enhet och packas upp först på servern.",
+              "Din enhet behåller sin vanliga nätverksadress; tunneln ligger ovanpå. Din internetleverantör fortfarande bär dina paket, men de går nu till en enda destination: VPN-servern. Utifrån ser din dator ut som en andra maskin som står bredvid den servern, i den stad och det land du valt."
+            ]
+          },
+          {
+            "h2": "Vad som ändras i det ögonblicket du ansluter",
+            "p": [
+              "Fyra saker, och de bör hållas isär. Adressen en webbplats ser blir serverns adress. Dina DNS-förfrågningar går genom tunneln i stället till din internetleverantörs resolvere. Trafiken mellan dig och VPN-servern är oläsbar för vem som helst i mitten. Och varje förfrågan från din enhet lämnar nu samma källa, så att webbplatser kan gruppera dina besök under en adress.",
+              "Det sista skär åt båda håll. Serverns adress delas med alla andra som använder den i ögonblicket, så en streamingtjänst ser en hop och inte en person — och det är precis därför de flesta av dem försöker blockera det, och därför din egen trafik blandas in i en kö av andras.",
+              "Det finns ändå en ändring som folk lägger märke till först: webbplatser slutar fråga om de får veta var du är, för svaret de får beskriver servern. Allt webbplatsen hämtar ur adressen — land, stad, ungefärlig del av staden — beskriver nu VPN-servern i stället för din gata."
+            ]
+          },
+          {
+            "h2": "Vem som ändå ser vad",
+            "p": [
+              "En VPN tar bort en part ur mitten och sätter in en annan. Vilken part det är avgör hur mycket tunneln är värd för dig:",
+              "Ingen av de fyra ser samma bild, och det är när de förväxlas som de flesta VPN-råd går fel."
+            ],
+            "list": [
+              "Din internetleverantör: att du är ansluten till en VPN-server, dess adress och ungefär hur mycket data som rör sig. Inte vilka webbplatser du besöker.",
+              "VPN-leverantören: varje destination du begär, kopplad till ditt konto, om den inte kör en loggfri policy som har klarat en revision.",
+              "Webbplatsen du besöker: VPN-serverns adress, plus dina inloggningar, kakor och webbläsare som vanligt.",
+              "Någon på samma wifi: inget läsbart. Tunneln var krypterad innan den rörde nätverket."
+            ]
+          },
+          {
+            "h2": "Vad en VPN inte gör",
+            "p": [
+              "Den gör dig inte anonym. Webbplatser du loggar in i vet fortfarande vem du är, din webbläsare ger fortfarande avtryck, och ett konto du haft i tio år blir inte nytt bara för att adressen ändrades.",
+              "Den skyddar dig inte mot resten av internetens otur heller: bedrägeri, skadlig programvara, ett återanvänt lösenord, ett läck hos butiken du köpte från. Och den döljer dig inte för VPN-leverantören själv — leverantören är nu parten i mitten, och därför betyder en granskningsbar loggfri policy mer än en funktionslista.",
+              "Den gör ingenting snabbare. Vår hastighetskomponent är en uppskattning utgående från arkitekturen — protokollstöd, servertäthet, avstånd — och inte en mätning vi själva gjort, och {{method}} säger det i klartext."
+            ]
+          },
+          {
+            "h2": "Så bedömer du en på fem minuter",
+            "p": [
+              "Om du kollar fem saker, kolla dessa: publicerar leverantören en revision av sin loggfri policy med namngiven revisor och datum, och är servrarna RAM-baserade så att inget ligger på en disk och väntar på att bli beslagtaget. Vilket land bolaget svarar under. Om leverantören stöder WireGuard, den moderna standarden. Och vad planen kostar i andra året, inte det första — rabatten tar nästan alltid slut.",
+              "Alla elva leverantörer vi täcker jämförs på exakt de komponenterna, med vikterna utskrivna bredvid: {{compare}}. Om integritet är den enda uppgiften du har viktlägger {{guide:privacy}} om samma fem komponenter för det jobbet.",
+              "En fråga till förtjänar sin plats: vad som händer efter första året. Introduktionspriset på ett treårsplan döljer det verkliga talet tills det är för sent att jämföra, så läs priset vid förnyelse före rabatten och inte efter — leverantörerna höjer nästan alltid priset vid förnyelse, och de ärliga skriver ut det i samma tabell."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Gör en VPN dig anonym?",
+            "Nej. Den ändrar adressen webbplatser ser och döljer destinationerna för din internetleverantör. Webbplatser du loggar in i vet fortfarande vem du är, din webbläsare ger fortfarande avtryck, och VPN-leverantören ser vart du går om dess loggfripåstående inte har granskats. {{explain:does-vpn-make-you-anonymous|vår guide om VPN-anonymitet}} reder ut skillnaden mellan en ändrad adress och en anonym en."
+          ],
+          [
+            "Minskar en VPN hastigheten på internet?",
+            "Alltid något: din trafik tar en extra hopp och krypteras två gånger. Hur mycket beror på avståndet till servern, hur belastad den är och om tunneln använder WireGuard. {{explain:do-vpns-slow-down|vår guide om VPN-hastighet}} skiljer den verkliga orsaken från dem reklamen pekar på."
+          ],
+          [
+            "Behöver jag en VPN hemma?",
+            "På eget bredband, sällan än reklamen påstår. På publikt wifi, på mobilnätverk eller i ett nätverk du inte själv sköter, betydligt oftare. {{explain:do-you-need-a-vpn-at-home|vår guide om VPN hemma}} redovisar vilka lägen som faktiskt ändrar något."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "are-vpns-safe",
+      "icon": "lock",
+      "published": "2026-10-05",
+      "reviews": [
+        "protonvpn",
+        "ivpn"
+      ],
+      "guides": [
+        "privacy"
+      ],
+      "en": {
+        "title": "Are VPNs Safe?",
+        "desc": "Installing a VPN is easy. Safety depends on who wrote the app, what the provider does with your traffic, and what its government can compel it to hand over.",
+        "lede": "A VPN is safe to install. What decides whether it is safe to use is who wrote the app, what the provider does with the traffic it terminates, and what its own government can compel it to do.",
+        "sections": [
+          {
+            "h2": "The app on your device is privileged software",
+            "p": [
+              "A VPN client sits in the middle of your network stack. It chooses where your DNS lookups go, decides which traffic leaves and when, and holds the keys to the tunnel. That makes it one of the most powerful apps you can install — a well-behaved one routes you honestly, a badly written or hostile one can route you anywhere and read whatever it wants.",
+              "So the safety question starts before you read a single feature list: who wrote this app, has anyone outside the company looked at it, and where did you download it. Vendors that publish their client source, submit their apps to independent audits, and ship through the official stores are making a checkable claim. A one-page landing page offering unlimited data for free is asking for trust with nothing behind it.",
+              "There is a practical middle ground: clients whose source is published, audit reports you can download rather than badges you are asked to trust, and apps signed and shipped through the official stores. None of that proves honesty. It moves the question from trust to evidence, which is the same direction our privacy component takes with providers: {{method}}."
+            ]
+          },
+          {
+            "h2": "What happens to your data inside the tunnel",
+            "p": [
+              "Encryption protects the tunnel, not the destination. Everything you request is decrypted at the VPN server, which means the provider sees every domain you visit, in order, in real time, linked to your account and your payment.",
+              "The only thing that changes that picture is a written no-logs policy that someone external has actually tested: which fields are kept, for how long, and what happens when a court order arrives. That is the substance of our privacy component — policy, audits, RAM-only infrastructure and jurisdiction, weighted at thirty percent of the total. Our methodology page states what an audit does and does not prove: {{method}}.",
+              "The pattern that survives scrutiny is boring: a written policy, an auditor it names, a report that says what was sampled and when, and infrastructure built so that the record an order would reach does not exist in the first place. Anything short of that is marketing."
+            ]
+          },
+          {
+            "h2": "Jurisdiction decides what can be compelled",
+            "p": [
+              "Where a company is incorporated sets the rules it answers to. Some countries require providers to retain connection records; some let a court order produce whatever exists; some have mutual assistance treaties that make cross-border requests routine. None of that reaches traffic that was never recorded in the first place.",
+              "This is why we treat jurisdiction as part of privacy rather than as trivia, and why a provider's paper policy and its home address are read together. The same thirty percent that weights policy also weights it: {{compare}}."
+            ]
+          },
+          {
+            "h2": "What can still go wrong with a VPN on",
+            "p": [
+              "A tunnel does not make the far end trustworthy. If you sign into a compromised shop, hand over a card to a phishing page, or run malware, the VPN encrypts that exchange faithfully and delivers it to whoever is waiting.",
+              "Two technical failures are worth naming. DNS leaks happen when a lookup escapes the tunnel and goes to your internet provider's resolver instead — rare in modern clients, worth checking once after you install. And if the tunnel drops without a kill switch, your traffic falls back to the clear connection for a few seconds; that matters on public wifi, not so much on your own broadband.",
+              "One more sits between the two: your own accounts. A VPN cannot make an account you signed into with your name, your email and your card any less yours, and that is where most exposure actually happens — not in the tunnel, but in the forms you fill in behind it."
+            ]
+          },
+          {
+            "h2": "A five-question safety check",
+            "p": [
+              "Before you trust a provider with your traffic, ask five things. Who owns the company and where is it registered. Whether its no-logs claim has been audited by a firm it names, with a date you can find. Whether the apps are open source, so that anyone can read them. Whether the servers run from RAM and wipe on reboot. And what the service costs once the first discount ends.",
+              "Providers that answer all five are the ones that score highest on privacy in our comparison, whatever they are called: {{compare}}. If the fifth question is what made you hesitate, {{guide:privacy}} weighs these same components and price separately.",
+              "Two of those five are free to check before you pay anything: whether the source is published, and whether the audit report carries a date. Providers that answer both tend to be the ones whose other answers are specific too."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Can a VPN harm my device?",
+            "A legitimate VPN app should not. It needs permission to change your network settings, which is why an app you have never heard of asking for those permissions is a warning sign in itself. The risk is almost never the tunnel — it is installing an unknown client from an unknown publisher, which is the same risk as any other software."
+          ],
+          [
+            "Is it safe to leave a VPN on all the time?",
+            "Yes on a phone or laptop. The cost is a few percent of battery and a small amount of extra data, and you gain a habit rather than a decision you have to remember. The exceptions are local devices — printers, network drives, a media server — which sometimes need the local network instead, handled by split tunneling. {{explain:do-you-need-a-vpn-at-home|our guide to VPNs at home}} covers that trade-off."
+          ],
+          [
+            "How do I know whether a no-logs claim is real?",
+            "Look for an audit report from a named firm with a date, a description of what was examined, servers that run from RAM so nothing is written to disk, and a provider willing to publish the report rather than a badge. No single audit proves everything, which is exactly what the methodology page is about: {{method}}."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Är VPN:s säkra?",
+        "desc": "Att installera en VPN är enkelt. Säkerheten beror på vem som skrivit appen · vad leverantören gör med din trafik · vad dess regering kan tvinga fram.",
+        "lede": "En VPN är säker att installera. Det som avgör om den är säker att använda är vem som skrivit appen, vad leverantören gör med den trafik den tar emot, och vad dess egen regering kan tvinga den att göra.",
+        "sections": [
+          {
+            "h2": "Appen på din enhet är privilegierad programvara",
+            "p": [
+              "En VPN-klient sitter i mitten av din nätverksstack. Den bestämmer vart dina DNS-förfrågningar går, vilken trafik som lämnar din enhet och när, och den håller nycklarna till tunneln. Det gör den till en av de mäktigaste appar du kan installera — en väl skriven klient dirigerar dig ärligt, en dåligt skriven eller fientlig kan dirigera dig var som helst och läsa vad den vill.",
+              "Säkerhetsfrågan börjar därför innan du läser en enda funktionslista: vem skrev appen, har någon utanför företaget tittat på den, och var laddade du ner den. Leverantörer som publicerar källkoden till sin klient, lämnar in sina appar till oberoende revisioner och distribuerar via de officiella butikerna gör ett påstående som går att kontrollera. En enda landningssida som erbjuder obegränsad data gratis ber om tillit utan något att stå på.",
+              "Det finns en praktisk mellanväg: klienter vars källkod är publicerad, revisionsrapporter du kan ladda ner i stället för märken du uppmanas att lita på, och appar som är signerade och distribuerade via de officiella butikerna. Inget av det bevisar ärlighet. Det flyttar frågan från tillit till bevis, i samma riktning som vår integritetskomponent tar med leverantörerna: {{method}}"
+            ]
+          },
+          {
+            "h2": "Vad som händer med dina data inne i tunneln",
+            "p": [
+              "Kryptering skyddar tunneln, inte destinationen. Allt du begär avkrypteras på VPN-servern, vilket innebär att leverantören ser varje domän du besöker, i ordning, i realtid, kopplat till ditt konto och din betalning.",
+              "Enda saken som ändrar den bilden är en skriven loggfri policy som någon utomstående faktiskt har testat: vilka fält som sparas, hur länge, och vad som händer när ett domstolsbeslut kommer in. Det är innehållet i vår integritetskomponent — policy, revisioner, RAM-baserad infrastruktur och jurisdiktion — viktat till trettio procent av totalen. Vår metodsida beskriver vad en revision bevisar och inte bevisar: {{method}}.",
+              "Det mönster som står sig i granskning är tråkigt: en skriven policy, en namngiven revisor, en rapport som anger vad som kontrollerades och när, och en infrastruktur byggd så att det register som ett beslut skulle nå inte finns från början. Allt som inte räcker till är marknadsföring."
+            ]
+          },
+          {
+            "h2": "Jurisdiktionen avgör vad som kan tvingas fram",
+            "p": [
+              "Var ett bolag är registrerat avgör vilka regler det svarar under. Vissa länder kräver att leverantörer sparar anslutningsposter; vissa låter ett domstolsbeslut framlägga vad som finns; vissa har fördrag om rättsligt bistånd som gör gränsöverskridande begäranden till en rutin. Inget av det når fram till trafik som aldrig registrerades från början.",
+              "Därför behandlar vi jurisdiktion som en del av integritet och inte som kuriosa, och därför läser man leverantörens papperspolicy och dess hemadress tillsammans. Samma trettio procent som viktlägger policy viktlägger också jurisdiktion: {{compare}}."
+            ]
+          },
+          {
+            "h2": "Vad som ändå kan gå fel när tunneln är uppe",
+            "p": [
+              "En tunnel gör inte den andra änden tillförlitlig. Loggar du in i en butik som har utsatts för intrång, lämnar ett kort till en bedrägerisida eller kör skadlig programvara, krypterar VPN:n utbytet troget och levererar det till den som väntar.",
+              "Två tekniska fel är värda att nämna. DNS-läckor uppstår när en förfrågan undsliper tunneln och går till din internetleverantörs resolver i stället — ovanliga i moderna klienter, värda att kolla en gång efter installationen. Och om tunneln faller utan kill switch faller din trafik tillbaka på den okrypterade anslutningen i några sekunder; det spelar roll på publikt wifi, mindre på ditt eget bredband.",
+              "Ett till sitter emellan: dina egna konton. En VPN kan inte göra ett konto du loggat in med ditt namn, din e-postadress och ditt kort mindre ditt, och det är där exponeringen faktiskt sker — inte i tunneln, utan i formulären du fyller i bakom den."
+            ]
+          },
+          {
+            "h2": "En säkerhetskontroll i fem frågor",
+            "p": [
+              "Innan du litar på en leverantör med din trafik, ställ fem frågor. Vem som äger bolaget och var det är registrerat. Om dess loggfripåstående har granskats av en namngiven firma med ett datum du kan hitta. Om apperna har öppen källkod så att alla kan läsa dem. Om servrarna körs från RAM och raderas vid omstart. Och vad tjänsten kostar när den första rabatten tar slut.",
+              "De leverantörer som svarar på alla fem är de som får högst betyg i integritet i vår jämförelse, oavsett vad de heter: {{compare}}. Om det var den femte frågan som fick dig att tveka viktlägger {{guide:privacy}} dessa komponenter och priset var för sig.",
+              "Två av de fem går att kolla gratis innan du betalar något: om källkoden är publicerad och om revisionsrapporten bär ett datum. De leverantörer som svarar på båda brukar också vara de som har konkreta svar på resten."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Kan en VPN skada min enhet?",
+            "En legitim VPN-app bör inte det. Den behöver behörighet att ändra dina nätverksinställningar, och därför är en app du aldrig hört om som begär de behörigheterna i sig en varningssignal. Risken är nästan aldrig tunneln — det är att installera en okänd klient från en okänd utgivare, och det är samma risk som med all annan programvara."
+          ],
+          [
+            "Är det säkert att ha VPN igång hela tiden?",
+            "Ja, på telefon eller dator. Kostnaden är några procent av batteriet och en liten mängd extra data, och du får en vana i stället för ett beslut du måste komma ihåg. Undantagen är lokala enheter — skrivare, nätverksdiskar, en mediaserver — som ibland behöver det lokala nätverket i stället, hanterat av split tunneling. {{explain:do-you-need-a-vpn-at-home|vår guide om VPN hemma}} redovisar den avvägningen."
+          ],
+          [
+            "Hur vet jag om ett loggfripåstående är verkligt?",
+            "Let efter en revisionsrapport från en namngiven firma med ett datum, en beskrivning av vad som granskades, servrar som körs från RAM så att inget skrivs till disk, och en leverantör som är villig att publicera rapporten i stället för ett märke. Ingen enskild revision bevisar allt, och det är precis vad metodsidan handlar om: {{method}}."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "do-vpns-slow-down",
+      "icon": "bolt",
+      "published": "2026-10-05",
+      "reviews": [
+        "expressvpn",
+        "nordvpn"
+      ],
+      "guides": [
+        "streaming"
+      ],
+      "en": {
+        "title": "Do VPNs Slow Down Your Internet?",
+        "desc": "Yes: a little always, a lot sometimes. Distance and server load decide the cost, not encryption — what the milliseconds are, and what to change first.",
+        "lede": "Every VPN costs you speed: an extra hop, twice the encryption work, and a server you do not control. The size of that cost is decided by distance and load far more than by the encryption itself.",
+        "sections": [
+          {
+            "h2": "Where the milliseconds actually go",
+            "p": [
+              "Your traffic now travels to the VPN server and back before it reaches the site you asked for. If that server is in another country, you have added the round-trip time of that distance to every request — often five to forty milliseconds, and on a distant or congested route considerably more.",
+              "On top of that sits encryption, which is cheap on modern hardware and rarely the bottleneck, and the provider's own network, which is where queues form. In practice the slowest part of a VPN connection is almost never the cryptography; it is how busy the server is and how far away it sits.",
+              "Distance changes how the number feels as well as how big it is. A ten-millisecond round trip is invisible in a call and barely noticeable while browsing; sixty milliseconds on a long route puts a pause in front of every click, and you feel all of it."
+            ]
+          },
+          {
+            "h2": "What actually varies",
+            "p": [
+              "Four variables move the number: distance to the server you picked, how many other people are on that server, the protocol in use, and how much your own line can carry in the first place.",
+              "WireGuard is the modern default and the lightest of the mainstream protocols, which is why we treat support for it as a baseline rather than a bonus. A loaded server on a long route will beat any protocol advantage you gained by connecting to it.",
+              "Density is the other half. The same city can hold a handful of servers or several hundred, and the ratio between subscribers and servers decides whether you land on a busy exit or an idle one. That is why a provider with many locations can still feel slow on the one you chose."
+            ]
+          },
+          {
+            "h2": "How much slower is realistic",
+            "p": [
+              "A nearby server on an uncongested route typically costs you a few percent. A far server under load, or a route that leaves a continent, can cost you a third or more of a fast connection, and it will show up first in video and in large downloads.",
+              "Our speed component is an estimate built from architecture — protocol support, server density relative to subscribers, and network reach — rather than a benchmark we ran ourselves, and we say so in the methodology: {{method}}. Treat it as a ranking of where to look first, not as a measurement of your line.",
+              "Two measurements settle most arguments: the round-trip time to a nearby server, which the tunnel adds to every request, and the throughput your line actually carries, which the tunnel shares rather than reduces. Both take minutes to record."
+            ]
+          },
+          {
+            "h2": "What to change before you blame the VPN",
+            "p": [
+              "Pick a server close to you, or close to the service you are using, because the total path is what matters: connecting to the country where the streaming catalogue lives beats connecting to a server three countries away.",
+              "Then check the obvious ones — a wired connection instead of wifi, a VPN protocol set to automatic or WireGuard, and a server that is not obviously the busiest one in the list. If speed is the whole reason you are here, our streaming weighting is dominated by exactly this component: {{guide:streaming}}."
+            ]
+          },
+          {
+            "h2": "When a slowdown means something else",
+            "p": [
+              "A VPN that halves your speed every time, on every server, usually points at something outside the tunnel: an overloaded exit, a rate limit in your plan, or a line that was never fast to begin with.",
+              "The cheapest way to settle it is to measure without the tunnel, then with it, on two servers in the same city. Ten minutes of that tells you more than any feature list — and it is the same discipline we apply to every number on this site: {{method}}."
+            ]
+          },
+          {
+            "h2": "Measuring it yourself in ten minutes",
+            "p": [
+              "Run one test with the tunnel down and write down download, upload and ping. Connect to a server in your own country, closest available, and run it again. Then connect to a server on another continent and run it a third time.",
+              "The gap between the first two numbers is the tunnel's overhead. The gap between the second and third is distance and load, and it is almost always the larger one. If the first gap is bigger than roughly a third on a quiet nearby server, something is wrong with the route rather than with your line — that is a support question, and a fair one to put before you pay for a year.",
+              "Keep the results. Re-testing after a firmware update or a change of internet provider tells you whether a slowdown belongs to the VPN or to everything else, which is the discipline behind every number we publish: {{method}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Why is my VPN slow on some servers and fast on others?",
+            "Because load and distance differ per server. A server in your own city carrying a few hundred people will feel close to your normal line; the same provider's server on another continent adds a round trip for every packet and competes with everyone else queued behind you. Test two servers in the same city before you conclude anything about the provider."
+          ],
+          [
+            "Does WireGuard make a VPN faster?",
+            "It removes protocol overhead and connects faster, which helps — but it cannot shorten the distance to the server or empty a busy one. If your connection to a far, loaded server is slow with WireGuard, it will be slow with any protocol. Support for WireGuard is a baseline in our comparison, not a differentiator."
+          ],
+          [
+            "Should I expect full speed with a VPN?",
+            "On a nearby server with headroom on your line, expect most of it — the small loss is the price of the tunnel. Expecting the full number with a server on another continent is not realistic. If a provider's speed claim matters to you, our speed component is one quarter of the score: {{compare}}."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Saktar ner en VPN ditt internet?",
+        "desc": "Ja: lite alltid, mycket ibland. Avstånd och serverbelastning avgör kostnaden, inte krypteringen — vad millisekunderna är, och vad du ändrar först.",
+        "lede": "Varje VPN kostar dig hastighet: ett extra hopp, dubbelt så mycket krypteringsarbete och en server du inte kontrollerar. Hur stor kostnaden blir avgörs av avstånd och belastning långt mer än av krypteringen i sig.",
+        "sections": [
+          {
+            "h2": "Var millisekunderna faktiskt tar vägen",
+            "p": [
+              "Din trafik går nu till VPN-servern och tillbaka innan den når fram till webbplatsen du bad om. Om servern finns i ett annat land har du lagt till rundresans tid för det avståndet till varje förfrågan — ofta fem till fyrtio millisekunder, och på en avlägsen eller trängd sträcka betydligt mer.",
+              "Ovanpå det ligger krypteringen, som är billig på modern hårdvara och sällan är flaskhalsen, och leverantörens eget nätverk, där köerna bildas. I praktiken är den långsammaste delen av en VPN-anslutning nästan aldrig kryptografin; det är hur upptagen servern är och hur långt bort den sitter.",
+              "Avståndet ändrar hur siffran känns lika mycket som hur stor den är. En rundresa på tio millisekunder är osynlig i ett samtal och knappt märkbar när du surfar; sextio millisekunder på en lång sträcka lägger en paus framför varje klick, och du känner alltihop."
+            ]
+          },
+          {
+            "h2": "Vad som faktiskt varierar",
+            "p": [
+              "Fyra variabler flyttar siffran: avståndet till servern du valde, hur många andra som finns på den servern, protokollet som används, och hur mycket din egen anslutning klarar från början.",
+              "WireGuard är den moderna standarden och det lättaste av de vanliga protokollen, och därför behandlar vi stödet för det som en grundförutsättning i stället för en bonus. En belastad server på en lång sträcka slår vilken protokollsfördel du än fick genom att ansluta till den.",
+              "Tätheten är den andra hälften. Samma stad kan ha ett handfull servrar eller flera hundra, och förhållandet mellan abonnenter och servrar avgör om du hamnar på en upptagen utgång eller en stillastående. Därför kan en leverantör med många platser ändå kännas långsam på den du valde."
+            ]
+          },
+          {
+            "h2": "Hur mycket långsammare är realistiskt",
+            "p": [
+              "En server i närheten på en oträngd sträcka kostar dig typiskt några procent. En avlägsen server under belastning, eller en sträcka som lämnar en kontinent, kan kosta en tredjedel eller mer av en snabb anslutning, och det syns först i video och i stora nedladdningar.",
+              "Vår hastighetskomponent är en uppskattning byggd på arkitekturen — protokollstöd, servertäthet i förhållande till abonnenter och nätverkstäckning — och inte en mätning vi själva gjort, och vi säger det i metoden: {{method}}. Behandla den som en rangordning över var du tittar först, inte som en mätning av din anslutning.",
+              "Två mätningar avgör de flesta tvisterna: rundresan till en server i närheten, som tunneln lägger till varje förfrågan, och den genomströmning din anslutning faktiskt klarar, som tunneln delar i stället för att minska. Båda tar några minuter att registrera."
+            ]
+          },
+          {
+            "h2": "Vad du ändrar innan du klandrar VPN",
+            "p": [
+              "Välj en server nära dig, eller nära tjänsten du använder, för det är hela sträckan som räknar: ansluta till landet där streamingkatalogen finns slår att ansluta till en server tre länder bort.",
+              "Kolla sedan de uppenbara — en kabelanslutning i stället för wifi, ett VPN-protokoll inställt på automatiskt eller WireGuard, och en server som uppenbarligen inte är den mest upptagna i listan. Om hastigheten är hela skälet till att du är här domineras vår viktläggning för streaming av exakt den här komponenten: {{guide:streaming}}."
+            ]
+          },
+          {
+            "h2": "När en nedsaktning betyder något annat",
+            "p": [
+              "En VPN som halverar din hastighet varje gång, på varje server, pekar vanligtvis på något utanför tunneln: en överbelastad utgång, en hastighetsbegränsning i din plan, eller en anslutning som aldrig var snabb från början.",
+              "Det billigaste sättet att avgöra det är att mäta utan tunneln, sedan med den, på två servrar i samma stad. Tio minuter av det säger dig mer än någon funktionslista — och det är samma disciplin vi lägger på varje siffra på den här sajten: {{method}}."
+            ]
+          },
+          {
+            "h2": "Mät det själv på tio minuter",
+            "p": [
+              "Kör ett test med tunneln nere och skriv ner nedladdning, uppladdning och ping. Anslut till en server i ditt eget land, närmaste tillgängliga, och kör om det igen. Anslut sedan till en server på en annan kontinent och kör det en tredje gång.",
+              "Skillnaden mellan de två första siffrorna är tunnelns överhead. Skillnaden mellan den andra och den tredje är avstånd och belastning, och den är nästan alltid den större. Om det första glappet är större än ungefär en tredjedel på en lugn server i närheten är det något fel på sträckan snarare än på din anslutning — det är en supportfråga, och en rättvis att ställa innan du betalar för ett år.",
+              "Spara resultaten. Om du testar igen efter en firmwareuppdatering eller ett byte av internetleverantör får du veta om en nedsaktning tillhör VPN eller allt annat, och det är disciplinen bakom varje siffra vi publicerar: {{method}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Varför är min VPN långsam på vissa servrar och snabb på andra?",
+            "För belastning och avstånd skiljer sig mellan servrar. En server i din egen stad som bär några hundra personer känns nära din vanliga anslutning; samma leverantörs server på en annan kontinent lägger till en rundresa för varje paket och konkurrerar med alla andra som står i kö bakom dig. Testa två servrar i samma stad innan du drar några slutsatser om leverantören."
+          ],
+          [
+            "Gör WireGuard en VPN snabbare?",
+            "Det tar bort protokolloverhead och ansluter snabbare, vilket hjälper — men det kan inte korta avståndet till servern eller tömma en upptagen server. Om din anslutning till en avlägsen, belastad server är långsam med WireGuard är den långsam med vilket protokoll som helst. Stödet för WireGuard är en förutsättning i vår jämförelse, inte något som skiljer leverantörerna åt."
+          ],
+          [
+            "Bör jag räkna med full hastighet med VPN?",
+            "På en server i närheten med marginal i din anslutning, räkna med det mesta — den lilla förlusten är priset för tunneln. Att räkna med hela siffran med en server på en annan kontinent är inte realistiskt. Om en leverantörs hastighetspåstående betyder något för dig är vår hastighetskomponent en fjärdedel av betyget: {{compare}}."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "vpn-vs-proxy",
+      "icon": "scale",
+      "published": "2026-10-05",
+      "reviews": [
+        "expressvpn",
+        "windscribe"
+      ],
+      "guides": [
+        "streaming"
+      ],
+      "en": {
+        "title": "VPN vs Proxy: What's the Difference?",
+        "desc": "Both change the address the internet sees. A VPN encrypts everything your device sends and installs itself as your network; a proxy usually covers one app.",
+        "lede": "A proxy and a VPN do the same headline trick: your traffic leaves somewhere else, so the site you visit sees that address instead of yours. They differ in how much of your device they cover, and whether the connection is encrypted.",
+        "sections": [
+          {
+            "h2": "The same trick, at different scales",
+            "p": [
+              "A proxy is a middleman you point one thing at — a browser, an app, sometimes a single request. Everything else on the device keeps using the ordinary connection, and the site still learns your real address from whichever part you forgot to point at it.",
+              "A VPN is installed as a network: once it is up, every app on the device routes through the tunnel, DNS lookups included. That is the practical difference for most people — coverage, not cryptography marketing.",
+              "The scale difference shows up in the failure mode. Forget to configure one browser behind a proxy and the tab quietly reverts to your real address; with a VPN up, there is nothing to forget, because routing is decided at the network layer for every application at once."
+            ]
+          },
+          {
+            "h2": "Encryption: the part that separates them",
+            "p": [
+              "Most proxies pass your bytes through unchanged. On public wifi, anyone able to read the network can read the request, including the address of the proxy itself. The proxy changes who the destination blames; it does not protect the path.",
+              "A VPN encrypts from your device to the server, so the wifi sees nothing readable and your internet provider sees one destination instead of many. If the network you are on is the reason you want privacy, this is the entire argument."
+            ]
+          },
+          {
+            "h2": "What each one is good at",
+            "p": [
+              "A proxy is quick and disposable: change the address a single browser uses, test how a page looks from another country, or route one application that will not cooperate with anything else. It is also usually just an HTTP hop, which many sites recognize and block.",
+              "A VPN is the right tool when you want the whole device covered, when the network is untrusted, and when you care about what your internet provider can see. Streaming, banking apps and sites with strict fraud checks treat both the same way — they see a datacenter address either way.",
+              "There is a second practical difference: what happens to DNS. A proxy forwards the request you gave it, but your device may still resolve names through your internet provider's resolver, which hands back a log of every domain you asked about. A VPN carries the lookup inside the tunnel, so the resolver sees it and your provider does not."
+            ]
+          },
+          {
+            "h2": "The trust question is the same",
+            "p": [
+              "Whatever you use, the middleman reads what you send it. A free proxy you found in a list is a stranger between you and every request you make through it; a VPN provider with an audited no-logs policy and a jurisdiction you can look up is a stranger with a contract.",
+              "Neither is anonymous. Both change an address. The difference in practice is how much of your traffic goes through the stranger, and how much is written down: {{compare}} ranks the providers on privacy at thirty percent of the total.",
+              "Speed is not a separator either, despite what both sides claim. A proxy does less work, so it starts ahead; a nearby VPN server on a light protocol closes most of that gap, and in both cases the busy end of the connection decides how it feels."
+            ]
+          },
+          {
+            "h2": "When to use which",
+            "p": [
+              "Use a proxy for one application, one quick test, or one site you access from a browser you keep separate. Use a VPN when the network itself is the risk, when you want every app covered without configuring each one, and when DNS should stay inside a tunnel rather than go to your internet provider.",
+              "There is also a simpler framing: a proxy is a setting, a VPN is a decision you make once and leave alone. If the decision is what you are weighing, our methodology explains how we score the alternative: {{method}}."
+            ]
+          },
+          {
+            "h2": "A quick way to choose",
+            "p": [
+              "Ask what has to be covered. One browser tab that should appear in another country: a proxy, configured in a minute and removed in one. A whole device, on a network you do not control, with DNS you would rather not hand to your internet provider: a VPN, installed once and left on.",
+              "Then ask who the middleman is. A proxy you found in a list has no policy, no auditor and no address you can look up; a provider you pay has all three, and you can read what our privacy component makes of them: {{method}}. The full comparison is at {{compare}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Can a proxy do everything a VPN does?",
+            "No. It can change the address one application reports, but it generally leaves the rest of your traffic untouched and often sends it unencrypted. For covering a whole device — every app, every DNS lookup — you need something installed at the network layer, which is what a VPN is."
+          ],
+          [
+            "Which is faster?",
+            "A proxy usually wins on paper, because it does less: fewer hops, less encryption, often a single browser tab instead of a whole device. On a real connection the difference is smaller than it sounds, and a nearby VPN server with WireGuard is rarely what you would notice."
+          ],
+          [
+            "Is a SOCKS5 proxy a VPN?",
+            "No. SOCKS5 moves packets for an application and adds no encryption of its own; it is useful for routing one program and useless as a privacy tool on its own. Combined with SSH or another encrypted layer it behaves differently, but that is a different configuration from a VPN tunnel."
+          ],
+          [
+            "Which one should I choose?",
+            "If you want the whole device protected on networks you do not control, choose a VPN. If you only need one browser or one app to appear somewhere else, a proxy is enough and simpler. Our comparison scores the VPN options on privacy, speed and price side by side: {{compare}}."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "VPN eller proxy: vad är skillnaden?",
+        "desc": "Båda ändrar adressen som internet ser. En VPN krypterar allt din enhet skickar och installerar sig som ditt nätverk; en proxy täcker oftast bara en app.",
+        "lede": "En proxy och en VPN gör i grunden samma sak: din trafik lämnar någon annanstans, så webbplatsen du besöker ser den adressen i stället för din. De skiljer sig i hur mycket av din enhet de täcker, och om anslutningen är krypterad.",
+        "sections": [
+          {
+            "h2": "Samma knep i olika skala",
+            "p": [
+              "En proxy är en mellanhand som du pekar ut en sak mot — en webbläsare, en app, ibland en enda förfrågan. Allt annat på enheten fortsätter använda den vanliga anslutningen, och webbplatsen lär sig ändå din riktiga adress genom den del du glömde att konfigurera.",
+              "En VPN installeras som ett nätverk: när den är uppe dirigeras varje app på enheten genom tunneln, DNS-förfrågningar inkluderade. Det är den praktiska skillnaden för de flesta — täckning, inte kryptografisk marknadsföring.",
+              "Skillnaden i skala syns i hur det går fel. Glömmer du att konfigurera en webbläsare bakom en proxy faller fliken tyst tillbaka till din riktiga adress; med VPN igång finns det inget att glömma, eftersom dirigeringen bestäms på nätverkslaget för alla program på en gång."
+            ]
+          },
+          {
+            "h2": "Kryptering: det som skiljer dem åt",
+            "p": [
+              "De flesta proxyer skickar dina byte igenom oförändrade. På publikt wifi kan den som kan läsa nätverket läsa förfrågan, inklusive adressen på proxyservern. Proxy:n ändrar vem destinationen skyller på; den skyddar inte sträckan.",
+              "En VPN krypterar från din enhet till servern, så wifi-nätverket ser inget läsbart och din internetleverantör ser en destination i stället för många. Om nätverket du är i är skälet till att du vill ha integritet är det hela argumentet."
+            ]
+          },
+          {
+            "h2": "Vad var och en är bra på",
+            "p": [
+              "En proxy är snabb och engångs: ändra adressen en enda webbläsare använder, testa hur en sida ser ut från ett annat land, eller dirigera ett program som inte samarbetar med något annat. Det är också oftast bara ett HTTP-hopp, som många webbplatser känner igen och blockerar.",
+              "En VPN är rätt verktyg när du vill ha hela enheten täckt, när nätverket inte är betrott, och när du bryr dig om vad din internetleverantör kan se. Streaming, bankappar och webbplatser med strikta bedrägerikontroller behandlar båda på samma sätt — de ser en datacenteradress i båda fallen.",
+              "Det finns en andra praktisk skillnad: vad som händer med DNS. En proxy vidarebefordrar den förfrågan du gav den, men din enhet kan ändå lösa namn via din internetleverantörs resolver, som lämnar tillbaka en logg över varje domän du frågade efter. En VPN bär förfrågan inne i tunneln, så resolvern ser den och din leverantör gör det inte."
+            ]
+          },
+          {
+            "h2": "Förtroendefrågan är densamma",
+            "p": [
+              "Oavsett vad du använder läser mellanhanden det du skickar till den. En gratis proxy du hittade i en lista är en främling mellan dig och varje förfrågan du gör genom den; en VPN-leverantör vars loggfri policy har granskats och vars jurisdiktion du kan slå upp är en främling med ett avtal.",
+              "Ingen av dem är anonym. Båda ändrar en adress. Skillnaden i praktiken är hur mycket av din trafik går genom främlingen, och hur mycket som skrivs ner: {{compare}} rangordnar leverantörerna i integritet med trettio procent av totalen.",
+              "Hastighet är ingen skillnad heller, trots vad båda parter påstår. En proxy gör mindre arbete, så den kommer ifrån; en VPN-server i närheten på ett lätt protokoll stänger det mesta av glappet, och i båda fall avgör den upptagna änden av anslutningen hur det känns."
+            ]
+          },
+          {
+            "h2": "När ska du använda vad?",
+            "p": [
+              "Använd en proxy för ett program, ett snabbt test eller en webbplats du besöker i en webbläsare du håller separat. Använd en VPN när nätverket självt är risken, när du vill att varje app ska täckas utan att konfigurera var och en, och när DNS bör stanna i tunneln i stället för att gå till din internetleverantör.",
+              "Det finns också en enklare formulering: en proxy är en inställning, en VPN är ett beslut du tar en gång och lämnar i fred. Om det är beslutet du väger, förklarar vår metod hur vi poängsätter alternativet: {{method}}."
+            ]
+          },
+          {
+            "h2": "Ett snabbt sätt att välja",
+            "p": [
+              "Fråga vad som ska täckas. En webbläsarflik som ska visas i ett annat land: en proxy, konfigurerad på en minut och borttagen på en. Hela enheten, i ett nätverk du inte kontrollerar, med DNS du helst inte vill lämna till din internetleverantör: en VPN, installerad en gång och lämnad på.",
+              "Fråga sedan vem mellanhanden är. En proxy du hittade i en lista har ingen policy, ingen revisor och ingen adress du kan slå upp; en leverantör du betalar har alla tre, och du kan läsa vad vår integritetskomponent gör av dem: {{method}}. Hela jämförelsen finns på {{compare}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Kan en proxy göra allt som en VPN gör?",
+            "Nej. Den kan ändra adressen ett program rapporterar, men den lämnar i regel resten av din trafik orörd och skickar den ofta okrypterad. För att täcka en hel enhet — varje app, varje DNS-uppslag — behöver du något som är installerat på nätverkslaget, och det är vad en VPN är."
+          ],
+          [
+            "Vad är snabbast?",
+            "En proxy vinner oftast på papper, för den gör mindre: färre hopp, mindre kryptering, ofta en enda webbläsarflik i stället för en hel enhet. På en verklig anslutning är skillnaden mindre än det låter, och en VPN-server i närheten med WireGuard är sällan det du märker."
+          ],
+          [
+            "Är en SOCKS5-proxy en VPN?",
+            "Nej. SOCKS5 flyttar paket för ett program och lägger inte till någon egen kryptering; det är användbart för att dirigera ett program och meningslöst som integritetsverktyg i sig. Kombineras det med SSH eller ett annat krypterat skikt beter det sig annorlunda, men det är en annan konfiguration än en VPN-tunnel."
+          ],
+          [
+            "Vilken ska jag välja?",
+            "Om du vill att hela enheten ska skyddas i nätverk du inte kontrollerar, välj en VPN. Om du bara behöver att en webbläsare eller en app visas någon annanstans räcker en proxy och den är enklare. Vår jämförelse poängsätter VPN-alternativen på integritet, hastighet och pris sida vid sida: {{compare}}."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "are-free-vpns-safe",
+      "icon": "gift",
+      "published": "2026-10-05",
+      "reviews": [
+        "windscribe",
+        "protonvpn"
+      ],
+      "guides": [
+        "beginners"
+      ],
+      "en": {
+        "title": "Are Free VPNs Safe?",
+        "desc": "Free VPNs are paid for by something — ads, your data, or your bandwidth. Three business models, what each one costs you, and the free tiers worth installing.",
+        "lede": "A free VPN is not free infrastructure. Someone pays for the servers, and with no invoice from you the payment comes from advertising, from data, or from other subscribers.",
+        "sections": [
+          {
+            "h2": "Free is a business model, not a price",
+            "p": [
+              "Almost every free VPN falls into one of three camps. The first sells an upgrade: the free tier is a demo of a product the company also sells, funded by the people who subscribe. The second monetizes attention — ads in the app, ads before you connect, sometimes ads injected into pages.",
+              "The third is the one worth being careful about: services that make money from your traffic or your data rather than from a product. That can mean selling aggregated usage information, or it can mean sharing your connection with paying customers, in which case strangers' requests leave from your address.",
+              "A fourth arrangement is worth naming: services bundled with something else — a browser, an antivirus suite, a phone cleaner — where the VPN is a line item rather than the product. The app is usually competent and the business behind it is somewhere else entirely."
+            ]
+          },
+          {
+            "h2": "What each model actually costs",
+            "p": [
+              "The upsell model costs you features: one country, a data cap, no streaming, one device. The advertising model costs you attention and, usually, a slower route through the cheapest infrastructure available.",
+              "The bandwidth or data model costs you something different — your network reputation and your data. A shared exit means requests you never made can come from your IP address, and an operator that will not say how it funds itself is not going to publish what it sells."
+            ]
+          },
+          {
+            "h2": "The free tiers that are worth installing",
+            "p": [
+              "The genuinely reasonable ones are the free plans of companies that also sell a subscription, because the incentive points at converting you rather than at your data. Three appear in our comparison: Proton VPN's free plan with no data cap on one device, Windscribe at ten gigabytes a month, and TunnelBear at two.",
+              "They are still free tiers: fewer countries, smaller networks, and the streaming blocks almost always land on free plans first. As a permanent replacement they are limited; as a trial of whether a VPN fits your life they cost nothing to answer."
+            ]
+          },
+          {
+            "h2": "How to tell which kind you have",
+            "p": [
+              "Ask four questions. Does the company sell a paid plan, and can you find its name, address and ownership. Is the privacy policy written in sentences that say what is collected rather than what is not collected. Does the app ask for permissions a VPN does not need. And does it say, anywhere, that it shares your connection or sells aggregated data.",
+              "If the answers are missing rather than bad, treat that as an answer. The providers we score put the weight where the method says it goes — policy, audits, jurisdiction — and the free tier tells you whether the company expects to be around next year: {{method}}.",
+              "Notice what is absent from those questions: encryption standards. Every provider on this list uses competent cryptography; the difference between them is entirely about what happens to the traffic after it leaves the tunnel, which is a governance question, not a protocol one."
+            ]
+          },
+          {
+            "h2": "What a free tier is good for",
+            "p": [
+              "On public wifi, a reputable free tier beats an open network even with a data cap: the tunnel exists, the encryption is real, and the limit applies to how much you use rather than to whether you are protected.",
+              "For everyday use on your own connection, the caps and the server lists are what push people back to a paid plan within a month. If you are testing whether a VPN is worth paying for at all, start with the free plan of one of the paid providers and compare honestly: {{compare}}."
+            ]
+          },
+          {
+            "h2": "If you already installed one",
+            "p": [
+              "Open the app once and read what it asks for. A VPN needs permission to change network settings and nothing more; a launcher, your contacts or your photos are a mismatch between the app and its stated job.",
+              "Then read the policy for the sentence that matters — whether usage is recorded, aggregated or shared, in those words. If the answer is missing, that is the answer. Two minutes of reading tells you more than any comparison of country counts.",
+              "If it turns out to be a free plan from a company that also sells subscriptions, keep it for public wifi and see whether you actually use it. If it is the other kind, uninstall it: the tunnel is not worth what runs alongside it."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Do free VPNs sell your data?",
+            "Some do, some aggregate it, and the honest ones say so in a policy you can read. The pattern to watch is a company with no paid product: if nothing is being sold to you, something is being sold around you. Free plans from providers with subscriptions work the other way — the plan is a sample of a product."
+          ],
+          [
+            "Are free VPNs slower?",
+            "Usually, for two reasons: free plans route through fewer, busier servers, and they are the last to get new capacity. The tunnel itself is not the constraint — the queue is. If speed is the reason you want a VPN, a capped free tier is the wrong place to test it: {{compare}}."
+          ],
+          [
+            "Is a free VPN good enough for airport wifi?",
+            "A free plan from a reputable provider is genuinely useful there — it encrypts the link to a server you chose, which is exactly what an open network lacks. Choose the closest server, watch the data cap, and remember that the safety of the app still depends on who wrote it: {{explain:are-vpns-safe|our guide to VPN safety}}."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Är gratis VPN:s säkra?",
+        "desc": "Gratis VPN:s betalas på något sätt — annonser · dina data · din bandbredd. Tre affärsmodeller, vad vardera kostar dig och gratisnivåer värda att installera.",
+        "lede": "En gratis VPN är inte gratis infrastruktur. Någon betalar för servrarna, och eftersom du inte får någon faktura kommer betalningen från annonser, från data eller från andra abonnenter.",
+        "sections": [
+          {
+            "h2": "Gratis är en affärsmodell, inte ett pris",
+            "p": [
+              "Nästan varje gratis VPN hamnar i ett av tre läger. Den första säljer en uppgradering: gratisnivån är en demo av en produkt som bolaget också säljer, finansierad av dem som prenumererar. Den andra tjänar på uppmärksamhet — annonser i appen, annonser innan du ansluter, ibland annonser som stoppas in i sidor.",
+              "Den tredje är den att vara försiktig med: tjänster som gör pengar på din trafik eller dina data i stället för på en produkt. Det kan innebära att sälja aggregerad användningsinformation, eller att dela din anslutning med betalande kunder, och i så fall lämnar främlingars förfrågningar från din adress.",
+              "En fjärde ordning är värd att nämna: tjänster som ingår i något annat — en webbläsare, ett antiviruspaket, en telefonrensare — där VPN är en rad i budgeten i stället för produkten. Appen är oftast kompetent och affären bakom är någon helt annanstans."
+            ]
+          },
+          {
+            "h2": "Vad varje modell faktiskt kostar",
+            "p": [
+              "Uppgraderingsmodellen kostar dig funktioner: ett land, ett datatak, ingen streaming, en enhet. Annonsmodellen kostar dig uppmärksamhet och, oftast, en långsammare sträcka genom den billigaste tillgängliga infrastrukturen.",
+              "Bandbredds- eller datamodellen kostar dig något annat — ditt nätverksrykte och dina data. En delad utgång innebär att förfrågningar du aldrig gjort kan komma från din IP-adress, och en operatör som inte säger hur den finansierar sig kommer inte att publicera vad den säljer."
+            ]
+          },
+          {
+            "h2": "De gratisnivåer som är värda att installera",
+            "p": [
+              "De som verkligen är reella är gratisnivåer från bolag som också säljer ett abonnemang, för incitamentet pekar mot att få dig att uppgradera och inte mot dina data. Tre finns med i vår jämförelse: Proton VPN:s gratisnivå utan datatak på en enhet, Windscribe på tio gigabyte i månaden och TunnelBear på två.",
+              "De är fortfarande gratisnivåer: färre länder, mindre nätverk, och streamingblockeringarna hamnar nästan alltid på gratisnivåerna först. Som permanent ersättning är de begränsade; som prov på om en VPN passar ditt liv kostar de inget att testa."
+            ]
+          },
+          {
+            "h2": "Så känner du vilken sort du har",
+            "p": [
+              "Ställ fyra frågor. Säljer bolaget en betald plan, och kan du hitta dess namn, adress och ägare. Är integritetspolicyn skriven i meningar som säger vad som samlas in i stället för vad som inte samlas in. Begär appen behörigheter som en VPN inte behöver. Och säger den någonstans att den delar din anslutning eller säljer aggregerade data.",
+              "Om svaren saknas i stället för att vara dåliga, behandla det som ett svar. De leverantörer vi poängsätter lägger vikten där metoden säger att den ska ligga — policy, revisioner, jurisdiktion — och gratisnivån säger dig om bolaget räknar med att finnas här nästa år: {{method}}.",
+              "Notera vad som saknas i de frågorna: krypteringsstandarder. Varje leverantör på den här listan använder kapabel kryptografi; skillnaden mellan dem handlar helt om vad som händer med trafiken efter att den lämnat tunneln, och det är en fråga om styrning, inte om protokoll."
+            ]
+          },
+          {
+            "h2": "Vad en gratisnivå är bra för",
+            "p": [
+              "På publikt wifi slår en välrenommerad gratisnivå ett öppet nätverk även med ett datatak: tunneln finns, krypteringen är på riktigt, och gränsen gäller hur mycket du använder och inte om du är skyddad.",
+              "För vardagsbruk på din egen anslutning är det taken och serverlistorna som skickar folk tillbaka till en betald plan inom en månad. Om du testar om en VPN är värd att betala för alls, börja med gratisnivån hos en av de betalda leverantörerna och jämför ärligt: {{compare}}."
+            ]
+          },
+          {
+            "h2": "Om du redan installerat en",
+            "p": [
+              "Öppna appen en gång och läs vad den begär. En VPN behöver behörighet att ändra nätverksinställningar och inget mer; en programstartare, dina kontakter eller dina foton tyder på att appen avviker från sin angivna uppgift.",
+              "Läs sedan policyn efter meningen som spelar roll — om användningen sparas, aggregeras eller delas, med de orden. Om svaret saknas är det svaret. Två minuters läsning säger dig mer än någon jämförelse av antal länder.",
+              "Om det visar sig vara en gratisnivå från ett bolag som också säljer abonnemang, behåll den för publikt wifi och se om du faktiskt använder den. Om det är den andra sorten, avinstallera den: tunneln är inte värd det som följer med."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Säljer gratis VPN:s dina data?",
+            "Vissa gör det, vissa aggregerar den, och de ärliga säger det i en policy du kan läsa. Mönstret att hålla ögonen på är ett bolag utan betald produkt: om inget säljs till dig säljs något omkring dig. Gratisnivåer från leverantörer med abonnemang fungerar tvärtom — nivån är ett prov på en produkt."
+          ],
+          [
+            "Är gratis VPN:s långsammare?",
+            "Oftast, av två skäl: gratisnivåer går genom färre och mer upptagna servrar, och de är sist att få ny kapacitet. Själva tunneln är inte begränsningen — köen är det. Om hastigheten är skälet till att du vill ha en VPN är en begränsad gratisnivå fel plats att testa det på: {{compare}}."
+          ],
+          [
+            "Räcker en gratis VPN för wifi på flygplatsen?",
+            "En gratisnivå från en välrenommerad leverantör är verkligen användbar där — den krypterar länken till en server du valde, och det är precis vad ett öppet nätverk saknar. Välj närmaste server, håll koll på datataket, och kom ihåg att appens säkerhet fortfarande beror på vem som skrev den: {{explain:are-vpns-safe|vår guide om VPN-säkerhet}}."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "do-you-need-a-vpn-at-home",
+      "icon": "router",
+      "published": "2026-10-05",
+      "reviews": [
+        "nordvpn",
+        "private-internet-access"
+      ],
+      "guides": [
+        "routers"
+      ],
+      "en": {
+        "title": "Do You Need a VPN at Home?",
+        "desc": "On your own broadband a VPN changes less than the adverts suggest. Where home use matters: your ISP, shared networks, remote access.",
+        "lede": "A home VPN is not a security upgrade so much as a change of who is watching: your internet provider stops seeing destinations, and one provider starts. Whether that trade is worth making depends on which of four situations you are in.",
+        "sections": [
+          {
+            "h2": "What your home network already does",
+            "p": [
+              "Your own wifi is a network you control, and the devices on it are usually yours. The party that sees your browsing at home is your internet provider: it resolves your DNS, it sees every destination, and in several countries it is allowed to keep or monetize that record.",
+              "So the honest home question is not whether the network is dangerous — on your own broadband it usually is not — but whether you want your internet provider to be the one keeping the log.",
+              "Your provider also chooses your resolvers by default, which means it sees the name of every host you ask for even when the connection itself is encrypted. That is a separate, quieter record than the destination log, and it is closed by sending the lookup through the tunnel."
+            ]
+          },
+          {
+            "h2": "The four situations where a home VPN earns its keep",
+            "p": [
+              "Your provider retains or sells browsing data, or blocks sites by domain — a tunnel moves those decisions out of its view, because it only sees one destination. You torrent: the swarm publishes your public address to everyone in it, and your provider gets letters about it. You have guests, flatmates or a shared network whose members you do not control. Or you want to reach your own devices from outside — which a VPN solves by design, since it puts you back on your home network.",
+              "If none of those applies, a VPN at home is mostly a habit rather than a necessity. That is not a reason against it; it is a reason not to buy the most expensive plan for it."
+            ]
+          },
+          {
+            "h2": "What gets worse at home",
+            "p": [
+              "Devices that expect to be local sometimes break when they are not: printers and network drives, streaming sticks talking to your phone, some banking apps that refuse datacenter addresses, and smart-home hubs that lose their cloud link.",
+              "Speed costs a little too — everything leaves and returns through a tunnel, and if you put the VPN on the router, that burden lands on the router's processor rather than your phone's. Both problems shrink with split tunneling, which routes selected apps around the tunnel."
+            ]
+          },
+          {
+            "h2": "Router or per device",
+            "p": [
+              "On the router, every device in the house is covered without installing anything — consoles, TVs, the fridge — and nothing can forget to connect. You pay in setup effort, in throughput, and in the local-device exceptions you have to carve out.",
+              "Per device is easier to change and easier to switch off, but coverage depends on you remembering. Phones and laptops covered individually plus a router for the rest is how most households end up doing it: {{guide:routers}} walks through the router option.",
+              "There is a third option that suits a lot of households: no router VPN at all, a VPN on the laptop and the phone only, and nothing else. It is the cheapest configuration to live with and covers the devices that actually leave the house."
+            ]
+          },
+          {
+            "h2": "A short decision list",
+            "p": [
+              "Take a VPN at home if your provider logs or blocks, if anyone torrents, if the network is shared with people you do not fully control, or if you want remote access to your own devices. Skip it if none of those is true and your threat model is signing-in and passwords — which a VPN does not touch.",
+              "If you do take one, the ranking that matters is privacy first: the provider becomes the party in the middle of your whole household. That component carries thirty percent of our score: {{compare}}, and the weights are explained at {{method}}."
+            ]
+          },
+          {
+            "h2": "A reasonable household default",
+            "p": [
+              "Install a reputable VPN on the devices that travel — laptop, phone — and leave it on by default. Put it on the router only if someone in the house uses devices you cannot configure and you have a router that will not choke on it.",
+              "Pick one provider for everyone, because two subscriptions in one house means two sets of settings to explain and two bills to remember. Privacy is the component that should decide which one, since that provider now sits in the middle of the whole household: {{compare}}.",
+              "Review it once a year, the way you would review an insurance policy — what changed, what the plan costs now that the first discount ended, and whether the audit trail behind it is still current: {{method}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Will a VPN slow down my home internet?",
+            "Somewhat — an extra hop and a busy server are added to every request — and noticeably if the VPN sits on a router with a weak processor. Nearby servers and WireGuard keep the loss small; distance and load decide the rest: {{explain:do-vpns-slow-down|our guide to VPN speed}}."
+          ],
+          [
+            "Can I put a VPN on my router instead of every device?",
+            "Yes, if the router firmware supports it or you flash firmware that does. Every device in the house then routes through the tunnel automatically, which is the main advantage, and the router does the encryption, which is the main cost: {{guide:routers}}."
+          ],
+          [
+            "Do I need a VPN on my phone at home?",
+            "Less than you need it away from home. At home your phone is on your own network; the value of a tunnel there is hiding destinations from your internet provider rather than from the wifi. On mobile data the same logic applies as on any network you do not run."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Behöver jag en VPN hemma?",
+        "desc": "På eget bredband förändrar en VPN mindre än reklamen påstår. När en VPN hemma spelar roll: din internetleverantör, delade nätverk och fjärråtkomst.",
+        "lede": "En VPN hemma är mindre en säkerhetsuppgradering än en ändring av vem som tittar: din internetleverantör slutar se destinationer, och en annan leverantör börjar. Om den växeln är värd att göra beror på vilket av fyra lägen du är i.",
+        "sections": [
+          {
+            "h2": "Vad ditt hemnätverk redan gör",
+            "p": [
+              "Ditt eget wifi är ett nätverk du kontrollerar, och enheterna på det är oftast dina. Parten som ser din surf hemma är din internetleverantör: den löser upp din DNS, den ser varje destination, och i flera länder får den spara eller tjäna pengar på den loggen.",
+              "Så den ärliga frågan hemma är inte om nätverket är farligt — på eget bredband är det oftast inte — utan om du vill att det är din internetleverantör som ska spara loggen.",
+              "Din leverantör väljer dessutom dina resolvere som standard, vilket innebär att den ser namnet på varje värd du frågar efter, även när själva anslutningen är krypterad. Det är en separat och tystare logg än destinationsloggen, och den stängs genom att skicka uppfrågningen genom tunneln."
+            ]
+          },
+          {
+            "h2": "De fyra lägena där en VPN hemma lönar sig",
+            "p": [
+              "Din leverantör sparar eller säljer surfdata, eller blockerar webbplatser via domän — en tunnel flyttar de besluten utanför dess synfält, för den ser bara en destination. Du torrentar: swarmet publicerar din publika adress till alla i det, och din leverantör får brev om det. Du har gäster, lägenhetsdelare eller ett delat nätverk vars medlemmar du inte kontrollerar. Eller du vill nå dina egna enheter utifrån — vilket en VPN löser genom design, för den placerar dig tillbaka i ditt hemnätverk.",
+              "Om inget av det gäller är en VPN hemma mest en vana snarare än ett måste. Det är ingen anledning att avstå; det är en anledning att inte köpa den dyraste planen för det."
+            ]
+          },
+          {
+            "h2": "Vad som blir sämre hemma",
+            "p": [
+              "Enheter som förväntar sig vara lokala går ibland i sönder när de inte är det: skrivare och nätverksdiskar, streamingsticks som pratar med din telefon, vissa bankappar som vägrar datacenteradresser, och smarta hem-hubbar som tappar sin molnanslutning.",
+              "Hastigheten kostar också lite — allt lämnar och återvänder genom en tunnel, och om du lägger VPN:n på routern hamnar den bördan på routerns processor snarare än på din telefon. Båda problemen minskar med split tunneling, som leder utvalda appar runt tunneln."
+            ]
+          },
+          {
+            "h2": "Router eller per enhet",
+            "p": [
+              "På routern täcks varje enhet i huset utan att något installeras — konsoler, tv:ar, kylen — och inget kan glömma att ansluta. Du betalar med installationsarbete, med genomströmning och med de lokala undantagen du måste plocka ut.",
+              "Per enhet är lättare att ändra och lättare att stänga av, men täckningen beror på att du kommer ihåg det. Telefoner och datorer täckta var för sig plus en router för resten är så de flesta hushåll landar i: {{guide:routers}} går igenom routeralternativet.",
+              "Det finns ett tredje alternativ som passar många hushåll: ingen VPN i routern alls, bara en VPN på datorn och telefonen, och inget annat. Det är den billigaste konfigurationen att leva med och täcker enheterna som faktiskt lämnar huset."
+            ]
+          },
+          {
+            "h2": "En kort beslutslista",
+            "p": [
+              "Skaffa en VPN hemma om din leverantör loggar eller blockerar, om någon torrentar, om nätverket delas med personer du inte fullt ut kontrollerar, eller om du vill ha fjärråtkomst till dina egna enheter. Hoppa över den om inget av det gäller och din hotbild är inloggningar och lösenord — som en VPN inte rör vid.",
+              "Om du skaffar en är det rangordningen som gäller, och integritet först: leverantören blir parten i mitten av hela ditt hushåll. Den komponenten bär trettio procent av vårt betyg: {{compare}}, och vikterna förklaras på {{method}}."
+            ]
+          },
+          {
+            "h2": "Ett rimligt standardval för hushållet",
+            "p": [
+              "Installera en välrenommerad VPN på de enheter som följer med — dator, telefon — och lämna den på som standard. Lägg den i routern bara om någon i huset använder enheter du inte kan konfigurera och du har en router som inte stannar av på den.",
+              "Välj en leverantör för alla, för två prenumerationer i ett hus betyder två uppsättningar inställningar att förklara och två räkningar att hålla reda på. Integritet är komponenten som bör avgöra vilken, eftersom den leverantören nu sitter i mitten av hela hushållet: {{compare}}.",
+              "Gå igenom den en gång om året, som du skulle gå igenom en försäkring — vad som ändrats, vad planen kostar nu när den första rabatten tog slut, och om revisionsunderlaget bakom fortfarande är aktuellt: {{method}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Kommer en VPN att sakta ner mitt hemnätverk?",
+            "Något — ett extra hopp och en belastad server läggs till i varje förfrågan — och märkbart om VPN:n sitter i en router med en svag processor. Närliggande servrar och WireGuard håller förlusten liten; avstånd och belastning avgör resten: {{explain:do-vpns-slow-down|vår guide om VPN-hastighet}}."
+          ],
+          [
+            "Kan jag lägga en VPN i min router i stället för på varje enhet?",
+            "Ja, om routerns firmware stöder det eller om du flashar en firmware som gör det. Varje enhet i huset leds då genom tunneln automatiskt, vilket är huvudfördelen, och routern sköter krypteringen, vilket är huvudkostnaden: {{guide:routers}}."
+          ],
+          [
+            "Behöver jag en VPN på min telefon hemma?",
+            "Mindre än när du är borta hemifrån. Hemma är din telefon på ditt eget nätverk; värdet av en tunnel där är att dölja destinationer för din internetleverantör snarare än för wifi:n. På mobilnätverk gäller samma logik som i ett nätverk du inte sköter själv."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "can-a-vpn-hide-your-ip",
+      "icon": "globe",
+      "published": "2026-10-05",
+      "reviews": [
+        "mullvad",
+        "private-internet-access"
+      ],
+      "guides": [
+        "privacy"
+      ],
+      "en": {
+        "title": "Can a VPN Hide Your IP Address?",
+        "desc": "Yes — from the sites you visit and from your ISP. Not from the VPN provider, not from sites you are signed into, and not from anyone correlating traffic.",
+        "lede": "Hiding your IP address is the one thing a VPN does unambiguously: the site you visit sees the server's address instead of yours. What that buys you depends entirely on who was supposed to see it.",
+        "sections": [
+          {
+            "h2": "Which IP address we mean",
+            "p": [
+              "Your public IP address is the one your internet provider assigned to your connection — the string a site uses to see roughly where you are and who carries your traffic. The private address inside your home network never leaves it anyway.",
+              "When you connect to a VPN, requests leave from the server, so the destination records the server's address. Your own address still exists and is still bound to your line; it simply is not in the request any more."
+            ]
+          },
+          {
+            "h2": "What the site sees instead",
+            "p": [
+              "It sees an address belonging to a datacenter, in a country you chose, shared with everyone else using that server at that moment. From the destination's point of view the visitor became a crowd — which is exactly how streaming sites detect and block VPN traffic, by matching addresses against lists they maintain.",
+              "That shared crowd is also the protection: nothing about you is in the address itself, and the same server carries thousands of unrelated people's traffic.",
+              "Detection is straightforward rather than clever. Providers of blocking services publish lists of addresses belonging to hosting companies, geolocation databases record which ranges are datacenters rather than homes, and a site checks the visitor against both. Nothing about you is involved — the address alone is enough to raise a flag."
+            ]
+          },
+          {
+            "h2": "Who still knows your real address",
+            "p": [
+              "The VPN provider, which accepted your connection from it, knows your account and your address together unless its no-logs claim has been audited. Your internet provider still sees your address and sees that you are connected to one VPN server, even though the destinations are hidden.",
+              "Sites you are signed into do not need the IP address at all — your login is a stronger identifier. And anyone able to watch both ends of a connection — the same public wifi, an employer, a state network — can match timing and volume even when addresses and content are encrypted."
+            ]
+          },
+          {
+            "h2": "Shared address or dedicated address",
+            "p": [
+              "Most VPN plans give you a shared address, which is the default for privacy: your traffic blends into everyone else's. A few providers sell a dedicated address as an add-on — one address reserved for you.",
+              "That trades privacy for reputation. A dedicated address stops looking like a VPN to sites that block datacenter ranges, which helps with banking and stubborn logins, and gives anyone who records it a stable string to associate with you. Use one only where you need it, and keep the shared address for everything else.",
+              "There is also an IPv6 detail worth knowing. If your connection supports IPv6 and the tunnel only carries IPv4, requests can escape over the other protocol and reveal your real address. Modern clients avoid this by disabling IPv6 outside the tunnel or carrying it inside — worth checking once on your own setup."
+            ]
+          },
+          {
+            "h2": "What a hidden IP is actually good for",
+            "p": [
+              "It removes the address-based part of your exposure: sites no longer see your provider or your city, your internet provider no longer sees the destinations, and your public address stops appearing in things like the torrent swarm, where every participant sees it — {{guide:torrenting}}.",
+              "It does not remove who you are when you sign in, and it does not resist someone correlating traffic patterns. If your goal is a changed address, a VPN does that job cleanly; if your goal is anonymity, the address was never the hard part: {{explain:does-vpn-make-you-anonymous|our guide to VPN anonymity}}."
+            ]
+          },
+          {
+            "h2": "What the address does and does not say",
+            "p": [
+              "A VPN server's address says where the server is and nothing about who is behind it. That is the whole benefit: the visitor's city, country and internet provider are replaced by a datacenter that thousands of other people share.",
+              "It is also the limit. Geo-location itself becomes approximate, so services that rely on precision — local delivery, taxi pickups, fraud checks that expect a home address — will treat you as a visitor from somewhere else, and sometimes that is exactly what you wanted.",
+              "Your own address does not change at all. It stays bound to your line, and it reappears in every request the moment the tunnel drops. A hidden address is a property of an up connection, not of your account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Does a VPN change my IP address permanently?",
+            "No — it changes it while the tunnel is up, and your original address returns the moment you disconnect. Your provider still assigns the same address to your line, and the VPN server's address is the same for everyone who uses it."
+          ],
+          [
+            "Can someone find my real IP address with a VPN on?",
+            "Not from the traffic you send through the tunnel. They can find it from somewhere else: a site you are signed into, a file you share directly, a WebRTC leak in a misconfigured browser, or an account that has your address on file. The tunnel hides the address on the wire, not the data you hand over."
+          ],
+          [
+            "Do websites know I use a VPN?",
+            "Usually yes. The server's address sits in published ranges and databases, so a site can tell that the visitor arrives from a datacenter shared by many people. That is why some sites block it and why some services quietly accept it — knowing and caring are different things."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Kan en VPN dölja din IP-adress?",
+        "desc": "Ja — från webbplatser och från din internetleverantör. Inte från VPN-leverantören, inte från webbplatser du är inloggad i, inte från den som korrelerar trafik.",
+        "lede": "Att dölja din IP-adress är det enklaste en VPN presterar: webbplatsen du besöker ser serverns adress i stället för din. Vad det ger dig beror helt på vem som skulle ha sett den.",
+        "sections": [
+          {
+            "h2": "Vilken IP-adress vi menar",
+            "p": [
+              "Din publika IP-adress är den din internetleverantör tilldelat din anslutning — den sträng som en webbplats använder för att se ungefär var du är och vem som bär din trafik. Den privata adressen i ditt hemnätverk lämnar det ändå aldrig.",
+              "När du ansluter till en VPN lämnar förfrågningarna från servern, så destinationen registrerar serverns adress. Din egen adress finns fortfarande och är fortfarande kopplad till din linje; den finns helt enkelt inte längre i förfrågan."
+            ]
+          },
+          {
+            "h2": "Vad webbplatsen ser i stället",
+            "p": [
+              "Den ser en adress som tillhör ett datacenter, i ett land du valt, delad med alla andra som använder den servern i ögonblicket. Ur destinationens synpunkt blev besökaren en hop — och det är precis så streamingwebbplatser upptäcker och blockerar VPN-trafik, genom att matcha adresser mot listor de underhåller.",
+              "Den delade hopen är också skyddet: ingenting om dig finns i adressen själv, och samma server bär tusentals orelaterade personers trafik.",
+              "Upptäckten är rak snarare än smart. Leverantörer av blockeringstjänster publicerar listor över adresser som tillhör hostingbolag, geolokaliseringsdatabaser registrerar vilka intervall som är datacenter och inte hem, och en webbplats kontrollerar besökaren mot båda. Inget om dig är inblandat — adressen ensam räcker för att lyfta en flagga."
+            ]
+          },
+          {
+            "h2": "Vem som ändå känner till din riktiga adress",
+            "p": [
+              "VPN-leverantören, som tog emot din anslutning från den, känner till ditt konto och din adress tillsammans om dess loggfripåstående inte har granskats. Din internetleverantör ser fortfarande din adress och ser att du är ansluten till en VPN-server, även om destinationerna är dolda.",
+              "Webbplatser du är inloggad i behöver alls inte IP-adressen — din inloggning är en starkare identifierare. Och den som kan bevaka båda ändarna av en anslutning — samma publika wifi, en arbetsgivare, ett statligt nätverk — kan matcha tidpunkt och volym även när adresser och innehåll är krypterade."
+            ]
+          },
+          {
+            "h2": "Delad adress eller dedikerad adress",
+            "p": [
+              "De flesta VPN-planer ger dig en delad adress, vilket är standarden för integritet: din trafik blandas in i allas. Några leverantörer säljer en dedikerad adress som tillägg — en adress reserverad för dig.",
+              "Det byter integritet mot rykte. En dedikerad adress slutar se ut som en VPN för webbplatser som blockerar datacenterintervall, vilket hjälper till med banktjänster och envisa inloggningar, och ger den som registrerar den en stabil sträng att koppla till dig. Använd en bara där du behöver den, och ha den delade adressen för allt annat.",
+              "Det finns också en IPv6-detalj värd att känna till. Om din anslutning stöder IPv6 och tunneln bara bär IPv4 kan förfrågningar lämna genom det andra protokollet och avslöja din riktiga adress. Moderna klienter undviker det genom att inaktivera IPv6 utanför tunneln eller bära den i den — värt att kontrollera en gång på din egen uppsättning."
+            ]
+          },
+          {
+            "h2": "Vad en dold IP faktiskt är bra för",
+            "p": [
+              "Det tar bort den adressbaserade delen av din exponering: webbplatser ser inte längre din leverantör eller din stad, din internetleverantör ser inte längre destinationerna, och din publika adress slutar dyka upp i sådant som torrentswarmet, där varje deltagare ser den — {{guide:torrenting}}.",
+              "Det tar inte bort vem du är när du loggar in, och det hindrar inte någon från att korrelera trafikmönster. Om ditt mål är en ändrad adress gör en VPN det jobbet rent; om ditt mål är anonymitet var adressen aldrig det svåra: {{explain:does-vpn-make-you-anonymous|vår guide om VPN-anonymitet}}."
+            ]
+          },
+          {
+            "h2": "Vad adressen säger och inte säger",
+            "p": [
+              "En VPN-servers adress säger var servern finns och ingenting om vem som står bakom. Det är hela fördelen: besökarens stad, land och internetleverantör ersätts av ett datacenter som tusentals andra delar.",
+              "Det är också begränsningen. Geolokaliseringen i sig blir ungefärlig, så tjänster som förlitar sig på precision — lokal leverans, taxihämtningar, bedrägerikontroller som förväntar sig en hemadress — behandlar dig som en besökare från något annat ställe, och ibland är det precis det du ville.",
+              "Din egen adress ändras inte alls. Den förblir kopplad till din linje, och den dyker upp igen i varje förfrågan i det ögonblick tunneln faller. En dold adress är en egenskap hos en uppkopplad anslutning, inte hos ditt konto."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ändrar en VPN min IP-adress permanent?",
+            "Nej — den ändrar den medan tunneln är uppe, och din ursprungliga adress återkommer i det ögonblick du kopplar ifrån. Din leverantör tilldelar fortfarande samma adress till din linje, och VPN-serverns adress är densamma för alla som använder den."
+          ],
+          [
+            "Kan någon hitta min riktiga IP-adress med VPN på?",
+            "Inte från trafiken du skickar genom tunneln. De kan hitta den någon annanstans: en webbplats du är inloggad i, en fil du delar direkt, ett WebRTC-läck i en felkonfigurerad webbläsare, eller ett konto som har din adress registrerad. Tunneln döljer adressen i kabeln, inte data du lämnar ifrån dig."
+          ],
+          [
+            "Vet webbplatser att jag använder en VPN?",
+            "Oftast ja. Serverns adress finns i publicerade intervall och databaser, så en webbplats kan se att besökaren kommer från ett datacenter som många delar. Därför blockerar vissa webbplatser det och därför accepterar vissa tjänster det i tysthet — att veta och att bry sig är olika saker."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "can-isp-see-vpn",
+      "icon": "eye",
+      "published": "2026-10-05",
+      "reviews": [
+        "expressvpn",
+        "surfshark"
+      ],
+      "guides": [
+        "privacy"
+      ],
+      "en": {
+        "title": "Can Your ISP See What You Do With a VPN?",
+        "desc": "With a tunnel up, your internet provider sees one destination: the VPN server. It still sees how much you transfer and when, and usually that a VPN is in use.",
+        "lede": "Your internet provider is the party that sees everything you do online by default. A VPN does not remove it from the path — it reduces what passes through it to one address and a flow of unreadable bytes.",
+        "sections": [
+          {
+            "h2": "What your ISP sees without a VPN",
+            "p": [
+              "Every destination you reach is a request your provider routes for you, so it sees the domains you look up, the addresses you connect to, and — in a normal HTTPS connection — the hostname sent during the handshake, before the encrypted part starts.",
+              "It also sees timing and volume: when you are online, how long a session runs, and roughly what kind of traffic it is. That record is the reason retention and monetization rules vary so much between countries, and the reason a tunnel is more than a technicality."
+            ]
+          },
+          {
+            "h2": "What it sees once you connect",
+            "p": [
+              "One destination: your VPN server, for as long as the tunnel is up. The DNS lookups travel inside it, the destinations are inside it, and the content is encrypted before it reaches your provider at all.",
+              "So the browsing history it could have kept becomes a single line — connected to this server, at these times, transferring this much — and the sites behind the tunnel are simply not part of its view any more."
+            ]
+          },
+          {
+            "h2": "What can still be inferred",
+            "p": [
+              "Volume and timing survive the tunnel. A sustained forty-megabit stream for two hours looks different from fifteen minutes of light browsing, and patterns like that can be matched against what is publicly known about a person's day. This is traffic analysis, not reading, and it is limited.",
+              "Your provider can also usually tell that you are using a VPN. The protocol has signatures, the destination belongs to a hosting company, and some networks deliberately recognize and throttle or block VPN endpoints — a practice more common on restricted networks than on ordinary home broadband.",
+              "Whether any of this is acted on depends on where you are. Ordinary home broadband providers rarely inspect traffic beyond capacity management; networks that filter content do, and they can often identify a tunnel without reading it. Knowing which kind of network you are on settles how much of this matters."
+            ]
+          },
+          {
+            "h2": "Does a VPN stop your ISP throttling you?",
+            "p": [
+              "It stops destination-based throttling, because your provider no longer knows which service you are using — it cannot single out streaming or torrenting it cannot identify.",
+              "It does not stop a general speed cap, congestion in your local network, or a plan that limits how much you transfer. Data caps still count with a VPN on: your provider measures bytes at the line, and the tunnel does not make them invisible, only unlabeled."
+            ]
+          },
+          {
+            "h2": "How this fits the rest of your privacy",
+            "p": [
+              "Removing your internet provider from the destination picture is half the job; the other half is who the tunnel now belongs to. The VPN provider sees what your ISP no longer does, which is why our privacy component is built around what that provider has committed to and what an auditor has verified: {{method}}.",
+              "If you are weighing which provider to trust with that role, the comparison scores all eleven on exactly those terms: {{compare}}. The wider question of what a VPN buys you overall is covered separately: {{explain:what-does-vpn-protect|what a VPN actually protects you from}}."
+            ]
+          },
+          {
+            "h2": "DNS with and without a tunnel",
+            "p": [
+              "Encrypted DNS is the other half of the story. Without it, every name you look up goes to a resolver — usually your provider's — in a form it can read and keep, even when the connection to the site itself is encrypted.",
+              "Sending DNS over HTTPS or TLS to someone else's resolver hides the names from your provider, and it is a real improvement. It does not hide the addresses your device then connects to, and the resolver you chose keeps the log instead. A VPN carries both halves inside the tunnel, which is why it closes the record rather than moving it."
+            ]
+          },
+          {
+            "h2": "How long any of it is kept",
+            "p": [
+              "Retention rules differ by country: some require internet providers to keep connection records for a fixed period, some allow them to keep what they collect for as long as they like, and some limit collection in the first place. The rules that apply to you are the ones in the country your traffic physically crosses.",
+              "This is also where the choice of tunnel matters again. What never gets recorded cannot be retained, produced or leaked — and that is the reasoning behind the privacy weighting in our comparison, thirty percent of every score we publish: {{method}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Can my ISP see the sites I visit with a VPN on?",
+            "No. The destinations are inside the encrypted tunnel, so your provider sees only the VPN server's address. What it does still see is that you are connected, for how long, and how much data moves."
+          ],
+          [
+            "Can my ISP tell that I am using a VPN?",
+            "Usually yes. VPN protocols leave recognizable signatures and the destination is a hosting provider, so the connection type is visible even though its contents are not. Whether that matters depends on your network: on ordinary home broadband it is rarely interesting, on restricted networks it can be throttled or blocked."
+          ],
+          [
+            "Does a VPN hide my browsing from my ISP permanently?",
+            "Only while the tunnel is up. Every minute your device is disconnected, ordinary lookups resume. That is why people leave it on by default rather than switching it per site — the protection is in the habit, not in the setting."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Kan din internetleverantör se vad du gör med en VPN?",
+        "desc": "Med en tunnel uppe ser din internetleverantör en destination: VPN-servern. Den ser fortfarande hur mycket du överför och när, och oftast att en VPN används.",
+        "lede": "Din internetleverantör ser som standard allt du gör online. En VPN tar inte bort den ur vägen — den reducerar det som passerar genom den till en adress och ett flöde av oläsbara byte.",
+        "sections": [
+          {
+            "h2": "Vad din internetleverantör ser utan en VPN",
+            "p": [
+              "Varje destination du når är en förfrågan som din leverantör dirigerar åt dig, så den ser de domäner du slår upp, de adresser du ansluter till, och — i en vanlig HTTPS-anslutning — värdnamnet som skickas under handskakningen, innan den krypterade delen börjar.",
+              "Den ser också tidpunkt och volym: när du är uppkopplad, hur länge en session pågår, och ungefär vad slags trafik det är. Den loggen är skälet till att regler för lagring och kommersiellt utnyttjande varierar så mycket mellan länder, och till att en tunnel är mer än en teknikalitet."
+            ]
+          },
+          {
+            "h2": "Vad den ser när du ansluter",
+            "p": [
+              "En destination: din VPN-server, så länge tunneln är uppe. DNS-uppslagerna följer med i den, destinationerna är i den, och innehållet är krypterat innan det alls hinner fram till din leverantör.",
+              "Så den surfhistorik den hade kunnat spara blir en enda rad — ansluten till den här servern, vid de här tiderna, överför så mycket — och webbplatserna bakom tunneln ingår helt enkelt inte längre i dess bild."
+            ]
+          },
+          {
+            "h2": "Vad som fortfarande kan härledas",
+            "p": [
+              "Volym och tidpunkt överlever tunneln. Ett ihållande flöde på fyrtio megabit i två timmar ser annorlunda ut än femton minuter lätt surf, och mönster som det kan matchas mot vad som är offentligt känt om en persons dag. Det är trafikanalys, inte läsning, och den är begränsad.",
+              "Din leverantör kan också oftast se att du använder en VPN. Protokollet har signaturer, destinationen tillhör ett hostingbolag, och vissa nätverk känner medvetet igen och stryper eller blockerar VPN-slutpunkter — en praktik som är vanligare på begränsade nätverk än på vanligt bredband hemma.",
+              "Om något av detta åtgärdas beror på var du befinner dig. Vanliga leverantörer av bredband hemma inspekterar sällan trafiken utöver kapacitetsstyrning; nätverk som filtrerar innehåll gör det, och de kan ofta identifiera en tunnel utan att läsa den. Att veta vilken sorts nätverk du är i avgör hur mycket av detta som spelar roll."
+            ]
+          },
+          {
+            "h2": "Stoppar en VPN att din internetleverantör stryper dig?",
+            "p": [
+              "Den stoppar strypning baserad på destination, eftersom din leverantör inte längre vet vilken tjänst du använder — den kan inte plocka ut streaming eller torrenting som den inte kan identifiera.",
+              "Den stoppar inte en allmän hastighetsbegränsning, trängsel i ditt lokala nätverk, eller en plan som begränsar hur mycket du överför. Datatak gäller fortfarande med VPN på: din leverantör mäter byte på linjen, och tunneln gör dem inte osynliga, bara namnlösa."
+            ]
+          },
+          {
+            "h2": "Hur det passar in i resten av din integritet",
+            "p": [
+              "Att ta bort din internetleverantör ur destinationsbilden är hälften av jobbet; den andra hälften är vem tunneln nu tillhör. VPN-leverantören ser vad din internetleverantör inte längre gör, och därför byggs vår integritetskomponent kring vad den leverantören åtagit sig och vad en revisor har verifierat: {{method}}.",
+              "Om du väger vilken leverantör du ska lita på med den rollen, betygsätter jämförelsen alla elva på exakt de villkoren: {{compare}}. Den bredare frågan om vad en VPN ger dig i sin helhet tas upp separat: {{explain:what-does-vpn-protect|vad en VPN verkligen skyddar dig från}}."
+            ]
+          },
+          {
+            "h2": "DNS med och utan en tunnel",
+            "p": [
+              "Krypterad DNS är den andra hälften av berättelsen. Utan den går varje namn du slår upp till en resolver — oftast din leverantörs — i en form den kan läsa och spara, även när anslutningen till webbplatsen i sig är krypterad.",
+              "Att skicka DNS över HTTPS eller TLS till någon annans resolver döljer namnen för din leverantör, och det är en verklig förbättring. Den döljer inte de adresser din enhet sedan ansluter till, och den resolver du valde sparar loggen i stället. En VPN bär båda halvorna i tunneln, och därför stänger den loggen i stället för att flytta den."
+            ]
+          },
+          {
+            "h2": "Hur länge något av det sparas",
+            "p": [
+              "Lagringsregler skiljer sig mellan länder: vissa kräver att internetleverantörer sparar anslutningsloggar under en fast period, vissa tillåter dem att spara vad de samlar in så länge de vill, och vissa begränsar insamlingen från början. De regler som gäller dig är de i det land din trafik fysiskt passerar.",
+              "Här spelar valet av tunnel roll igen. Det som aldrig registreras kan varken sparas, lämnas ut eller läcka ut — och det är resonemanget bakom viktningen av integritet i vår jämförelse, trettio procent av varje betyg vi publicerar: {{method}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Kan min internetleverantör se webbplatserna jag besöker med VPN på?",
+            "Nej. Destinationerna är i den krypterade tunneln, så din leverantör ser bara VPN-serverns adress. Däremot ser den att du är ansluten, hur länge, och hur mycket data som rör sig."
+          ],
+          [
+            "Kan min internetleverantör se att jag använder en VPN?",
+            "Oftast ja. VPN-protokoll lämnar igenkännbara signaturer och destinationen är en hostingleverantör, så anslutningstypen är synlig även om innehållet inte är det. Om det spelar roll beror på ditt nätverk: på vanligt bredband hemma är det sällan intressant, på begränsade nätverk kan det strypas eller blockeras."
+          ],
+          [
+            "Döljer en VPN min surf för min internetleverantör permanent?",
+            "Bara medan tunneln är uppe. Varje minut din enhet är frånkopplad återgår vanliga uppslag. Därför lämnar folk den på som standard i stället för att växla den per webbplats — skyddet ligger i vanan, inte i inställningen."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "does-vpn-make-you-anonymous",
+      "icon": "ghost",
+      "published": "2026-10-05",
+      "reviews": [
+        "mullvad",
+        "protonvpn"
+      ],
+      "guides": [
+        "privacy"
+      ],
+      "en": {
+        "title": "Does a VPN Make You Anonymous?",
+        "desc": "No. It changes the address the internet sees and hides destinations from your ISP. Anonymity needs no logins, no fingerprints and no payment trail.",
+        "lede": "A VPN gives you a different address, not a different identity. Sites you sign into still know you, your browser still prints a fingerprint, and the provider can see your destinations — those three facts are where most VPN anonymity claims quietly end.",
+        "sections": [
+          {
+            "h2": "The distinction that matters",
+            "p": [
+              "An IP address identifies a connection, not a person. Changing it removes one of the weaker signals someone watching you online could use — and replaces it with a shared server address that says nothing about you at all.",
+              "Identity is built from stronger material: the accounts you sign into, the cookies and storage your browser keeps, the way your device renders text and fonts, your writing style, your phone number at signup. A VPN touches none of those, which is why the honest answer to the headline question is no.",
+              "Think of it as a spectrum with two ends: a network address on one side, an identity on the other. A VPN moves you along the first step and stops, because everything past that step lives in data the tunnel never touches."
+            ]
+          },
+          {
+            "h2": "Where VPN users are identified",
+            "p": [
+              "The usual path does not involve breaking any encryption. Someone signs into a shop, and the shop records the account plus the address it was used from. A payment is made with a card in a name. An account email matches one used everywhere else. The tunnel was intact the whole way through.",
+              "The provider is the other route. It accepted your connection, so unless its no-logs policy is real and independently verified, your destinations are on record somewhere with your account attached — {{explain:are-vpns-safe|how to judge whether that policy is real}}.",
+              "Payments are the quiet one. A card, a phone number or an account email at signup introduces a name directly, and no amount of encryption afterwards removes the link that record created. Providers who take cash or cryptocurrency are making that particular path harder, which is worth noticing even if you never use the option."
+            ]
+          },
+          {
+            "h2": "What a VPN does contribute",
+            "p": [
+              "Less exposure is not no exposure, and the reduction is real. Your internet provider stops keeping a destination log, the wifi at the cafe stops seeing anything readable, your public address stops appearing in peer-to-peer swarms, and sites stop seeing your home city.",
+              "That is a meaningful improvement for most people's actual threat model — advertising, opportunistic snooping, an over-curious network — and it is the basis of the privacy component we score, which is about what the provider does with your data rather than about a cloak of invisibility: {{method}}.",
+              "Devices add their own signatures. Screen size, timezone, installed fonts and language settings combine into a fingerprint that stays stable while the address changes underneath it, so a site can recognise a returning browser even though it now arrives from a different country."
+            ]
+          },
+          {
+            "h2": "If anonymity is genuinely the goal",
+            "p": [
+              "The tools that aim at anonymity take a different approach: layered relays with no single party seeing both ends, no accounts at all, no logins to anything tied to you, a separate identity with separate payment, and a browser configured not to fingerprint you.",
+              "The discipline matters more than the software. A VPN used with your real accounts reveals nothing a VPN can fix; the same tunnel used from a device that never signs in anywhere is a different proposition. We do not score anonymity, because it is a property of behaviour — but we do score what each provider commits to: {{compare}}."
+            ]
+          },
+          {
+            "h2": "An honesty checklist",
+            "p": [
+              "If you want to know where you actually stand, answer five questions about your own habits. Do you sign into anything while the tunnel is up. Does the account have a payment method or a phone number attached. Is the browser the same one you use without the tunnel. Does the email appear anywhere else. Would your writing style be recognisable in a comment you leave.",
+              "Every yes is a link back to you that no encryption can cut, and most people answer yes to at least three. The VPN still did its job — the network observer learned nothing — but the identity question was never being asked of the network.",
+              "Where the answer is a firm no, the combination starts to mean something: a tunnel, a browser profile kept separate, no logins, and a provider whose privacy claim has actually been tested: {{method}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Does a VPN hide my identity from websites?",
+            "It hides your address and, by extension, roughly where your connection comes from. It does not hide your identity if you sign in, keep cookies, or let your browser fingerprint you. Sites that want to know who you are usually ask, and you usually tell them."
+          ],
+          [
+            "Can the police find you if you use a VPN?",
+            "An investigator starts with evidence other than your traffic: accounts, payments, devices, witnesses. If a provider keeps connection logs, a legal order can reach them; a provider with a genuinely no-logs architecture has nothing to hand over, which is the point of the audits our privacy component weighs. Neither outcome makes anyone anonymous — it changes what one party can produce."
+          ],
+          [
+            "Is a VPN anonymous?",
+            "No. It is private in transit — your traffic is encrypted between you and a server you chose — and that is worth something every day. Anonymity is a stronger claim that requires the tunnel plus no logins, no fingerprints and no payment trail, and almost nobody maintains all three: {{explain:does-vpn-make-you-anonymous|this article}} is the long version of exactly that."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Gör en VPN dig anonym?",
+        "desc": "Nej. Den ändrar adressen internet ser och döljer destinationer. Anonymitet kräver inga inloggningar, inga avtryck och ingen betalningshistorik.",
+        "lede": "En VPN ger dig en annan adress, inte en annan identitet. Webbplatser du loggar in i vet fortfarande vem du är, din webbläsare ger fortfarande avtryck, och leverantören kan se dina destinationer — vid de tre faktaorna slutar de flesta påståenden om VPN-anonymitet i tysthet.",
+        "sections": [
+          {
+            "h2": "Distinktionen som spelar roll",
+            "p": [
+              "En IP-adress identifierar en anslutning, inte en person. Att ändra den tar bort en av de svagare signalerna som någon som bevakar dig online kan använda — och ersätter den med en delad serveradress som inte säger någonting om dig alls.",
+              "Identitet byggs av starkare material: kontona du loggar in i, kakorna och lagringen din webbläsare sparar, hur din enhet renderar text och typsnitt, ditt skrivsätt, ditt telefonnummer vid registrering. En VPN rör inget av det, och därför är det ärliga svaret på rubrikfrågan nej.",
+              "Tänk dig det som ett spektrum med två ändar: en nätverksadress på den ena sidan, en identitet på den andra. En VPN flyttar dig ett steg på vägen och stannar, för allt efter det steget bor i data som tunneln aldrig rör."
+            ]
+          },
+          {
+            "h2": "Var VPN-användare identifieras",
+            "p": [
+              "Den vanliga vägen innebär inte att bryta någon kryptering. Någon loggar in i en butik, och butiken registrerar kontot plus adressen det användes från. En betalning görs med ett kort i ett namn. En kontomejl matchar en som används överallt annars. Tunneln var hel hela vägen.",
+              "Leverantören är den andra vägen. Den tog emot din anslutning, så om dess loggfri policy inte är verklig och oberoende verifierad ligger dina destinationer registrerade någonstans med ditt konto kopplat — {{explain:are-vpns-safe|hur du bedömer om den policyn är verklig}}.",
+              "Betalningar är den tysta vägen. Ett kort, ett telefonnummer eller en kontomejl vid registrering för in ett namn direkt, och hur mycket kryptering som helst efteråt tar inte bort länken den loggen skapade. Leverantörer som tar kontant eller kryptovaluta gör den vägen svårare, vilket är värt att notera även om du aldrig använder möjligheten."
+            ]
+          },
+          {
+            "h2": "Vad en VPN faktiskt tillför",
+            "p": [
+              "Mindre exponering är inte noll exponering, och minskningen är verklig. Din internetleverantör slutar spara en destinationslogg, wifi:n på caféet slutar se något läsbart, din publika adress slutar dyka upp i peer-to-peer-swarmar, och webbplatser slutar se din hemstad.",
+              "Det är en meningsfull förbättring för de flestas verkliga hotbild — reklam, tillfälliga specknlar, ett alltför nyfiket nätverk — och det är grunden för den integritetskomponent vi betygsätter, som handlar om vad leverantören gör med dina data snarare än om en kappad osynlighet: {{method}}.",
+              "Enheter lägger till sina egna signaturer. Skärmstorlek, tidszon, installerade typsnitt och språkinställningar kombineras till ett avtryck som förblir stabilt medan adressen ändras under den, så en webbplats kan känna igen en återkommande webbläsare även om den nu kommer från ett annat land."
+            ]
+          },
+          {
+            "h2": "Om anonymitet verkligen är målet",
+            "p": [
+              "Verktygen som siktar på anonymitet har ett annat tillvägagångssätt: lagerdelade relayrar där ingen ensam part ser båda ändarna, inga konton alls, inga inloggningar till något kopplat till dig, en separat identitet med separat betalning, och en webbläsare inställd på att inte ge avtryck.",
+              "Disciplinen betyder mer än programvaran. En VPN som används med dina riktiga konton avslöjar ingenting som en VPN kan åtgärda; samma tunnel som används från en enhet som aldrig loggar in någonstans är ett annat fall. Vi betygsätter inte anonymitet, eftersom det är en egenskap hos beteendet — men vi betygsätter vad varje leverantör åtar sig: {{compare}}."
+            ]
+          },
+          {
+            "h2": "En ärlighetschecklista",
+            "p": [
+              "Om du vill veta var du faktiskt står, besvara fem frågor om dina egna vanor. Loggar du in i något medan tunneln är uppe. Har kontot en betalmetod eller ett telefonnummer kopplat. Är webbläsaren samma som du använder utan tunneln. Dyker mejladressen upp någon annanstans. Skulle ditt skrivsätt kännas igen i en kommentar du lämnar.",
+              "Varje ja är en länk tillbaka till dig som ingen kryptering kan skära av, och de flesta svarar ja på minst tre. VPN:n gjorde fortfarande sitt jobb — nätverksbevakaren lärde sig ingenting — men identitetsfrågan ställdes aldrig till nätverket.",
+              "Där svaret är ett bestämt nej börjar kombinationen betyda något: en tunnel, en webbläsarprofil som hålls isär, inga inloggningar, och en leverantör vars integritetspåstående faktiskt har testats: {{method}}."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Döljer en VPN min identitet för webbplatser?",
+            "Den döljer din adress och, i förlängningen, ungefär var din anslutning kommer från. Den döljer inte din identitet om du loggar in, sparar kakor eller låter din webbläsare ge avtryck. Webbplatser som vill veta vem du är frågar oftast, och du berättar det oftast."
+          ],
+          [
+            "Kan polisen hitta dig om du använder en VPN?",
+            "En utredare börjar med bevis andra än din trafik: konton, betalningar, enheter, vittnen. Om en leverantör sparar anslutningsloggar kan ett rättsligt beslut nå dem; en leverantör med en på riktigt loggfri arkitektur har ingenting att lämna ut, och det är poängen med de granskningsar vår integritetskomponent väger. Inget av utfallen gör någon anonym — det ändrar vad en part kan lämna ut."
+          ],
+          [
+            "Är en VPN anonym?",
+            "Nej. Den är privat i transport — din trafik är krypterad mellan dig och en server du valde — och det är värt något varje dag. Anonymitet är ett starkare påstående som kräver tunneln plus inga inloggningar, inga avtryck och ingen betalningshistorik, och nästan ingen upprätthåller alla tre: {{explain:does-vpn-make-you-anonymous|den här artikeln}} är den långa versionen av precis det."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "what-does-vpn-protect",
+      "icon": "audit",
+      "published": "2026-10-05",
+      "reviews": [
+        "nordvpn",
+        "cyberghost"
+      ],
+      "guides": [
+        "beginners"
+      ],
+      "en": {
+        "title": "What Does a VPN Actually Protect You From?",
+        "desc": "A VPN covers network observation and address exposure: open wifi, your ISP log, your address in public swarms. Not phishing or malware.",
+        "lede": "A VPN is one layer with a specific job: it encrypts the path between your device and a server, and it changes the address the far end sees. Everything it protects you from follows from those two facts.",
+        "sections": [
+          {
+            "h2": "What it does cover",
+            "p": [
+              "Someone reading the network you are on — at the airport, in a hotel, on shared wifi — sees only the encrypted tunnel to your provider's server. Your internet provider loses the destination log it would otherwise keep. Your public address stops appearing wherever it would otherwise be published, such as a peer-to-peer swarm.",
+              "It also removes the geography of your connection: sites see a server in the country you picked, which is how people read the catalogue they pay for while travelling, and how a site that blocks your region's addresses lets you in.",
+              "Each of those is a specific, checkable benefit. Someone on the same wifi stops being able to read or redirect your requests; your provider's destination log stops growing; the address that appears in public is a shared server rather than the one tied to your line."
+            ]
+          },
+          {
+            "h2": "What it does not cover",
+            "p": [
+              "Phishing: you still type the password into the wrong site, and the tunnel delivers it faithfully. Malware: the download still runs. A breached shop: your email and password are in a database regardless of where you connected from. Account takeover: whoever has your session does not need your address.",
+              "Nor does it stop someone watching both ends, a browser that fingerprints you, or an employer or school device that manages what you install. The layer above the tunnel — your accounts, your browser, your files — is untouched by it.",
+              "The boundary is easy to state: the tunnel protects the connection, not the content you hand over once you arrive. Anything you type, upload or install passes through it untouched, and the VPN has no way to distinguish the safe request from the careless one."
+            ]
+          },
+          {
+            "h2": "Threat, and the layer that answers it",
+            "p": [
+              "The useful way to think about it is as a mapping rather than a single tool:",
+              "No single product answers all of these, and treating a VPN as if it did is how people end up disappointed with it."
+            ],
+            "list": [
+              "Eavesdropping on open wifi — a VPN answers this completely.",
+              "Your ISP keeping a destination log — a VPN answers this while it is on.",
+              "Your address appearing in a torrent swarm — a VPN answers this.",
+              "Region locks and IP-based blocking — a VPN usually answers this.",
+              "Phishing, weak passwords, breached databases — a password manager and two-factor authentication answer these.",
+              "Malware and ransomware — updates, careful downloads and backups answer these.",
+              "Being tracked while signed into sites — only not signing in, or a tracker-blocking browser, addresses this."
+            ]
+          },
+          {
+            "h2": "The layer that usually matters more",
+            "p": [
+              "For most households the highest-return security spending is unglamorous: a password manager so every site gets a unique secret, two-factor authentication on the accounts that matter, updates applied without delay, and a backup that restores after something goes wrong.",
+              "A VPN sits alongside those rather than in front of them. It is the layer that protects the connection itself, which is why we weight privacy — what the provider does with your data — as the largest single component of the score: {{method}}.",
+              "None of that is expensive, and none of it competes with the VPN for attention once it is set up. The pattern that works is a short list you finish rather than a long one you abandon: unique passwords, a second factor on the accounts that matter, updates applied without delay, and a backup you have actually restored once."
+            ]
+          },
+          {
+            "h2": "Choosing the layer you will actually use",
+            "p": [
+              "A protection that requires a decision every time is one you will skip. This is the practical argument for leaving a VPN on by default rather than per site: the tunnel is either up or it is not, and a habit beats an intention.",
+              "If you are picking which provider deserves that default position on your devices, all eleven are compared on privacy, speed and price with the weights shown: {{compare}}. The beginner's path through the whole setup is here: {{guide:beginners}}.",
+              "That ordering matters when money is involved. A household that buys a VPN and skips a password manager has bought the second most useful layer and left the first one on the table — and the first one is cheaper."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Does a VPN protect against hackers?",
+            "It protects against one kind: someone reading the network you are on. It does not protect against someone tricking you into handing over credentials, installing something, or reusing a password that leaked. Those are answered by authentication and habits, not by a tunnel."
+          ],
+          [
+            "Does a VPN protect my bank details?",
+            "Your bank connection was already encrypted with HTTPS before the VPN existed, and it stays encrypted. The VPN adds a private path to a server you chose and hides the destination from your internet provider — a real benefit, but not what keeps card numbers safe."
+          ],
+          [
+            "Do I still need antivirus with a VPN?",
+            "Yes. A VPN encrypts traffic in transit; it does not inspect what arrives or what you run. Keep your system updated, be suspicious of attachments and downloads, and treat the VPN as the network layer of that setup rather than a replacement for any part of it."
+          ]
+        ]
+      },
+      "sv": {
+        "title": "Vad skyddar en VPN dig egentligen från?",
+        "desc": "En VPN täcker nätverksbevakning och exponerad adress: öppet wifi, din internetleverantörs logg, din adress i swarmar. Inte bedrägeri eller skadlig programvara.",
+        "lede": "En VPN är ett lager med en bestämd uppgift: den krypterar vägen mellan din enhet och en server, och den ändrar adressen den andra änden ser. Allt den skyddar dig från följer av dessa två fakta.",
+        "sections": [
+          {
+            "h2": "Vad den faktiskt täcker",
+            "p": [
+              "Någon som läser nätverket du är i — på flygplatsen, på ett hotell, på delat wifi — ser bara den krypterade tunneln till din leverantörs server. Din internetleverantör förlorar destinationsloggen den annars hade sparat. Din publika adress slutar dyka upp där den annars skulle publiceras, till exempel i ett peer-to-peer-swarm.",
+              "Den tar också bort geografin i din anslutning: webbplatser ser en server i det land du valt, och det är så folk läser katalogen de betalar för när de reser, och så en webbplats som blockerar adresser från din region släpper in dig.",
+              "Var och en av dem är en specifik, kontrollerbar fördel. Någon på samma wifi slutar kunna läsa eller omdirigera dina förfrågningar; din leverantörs destinationslogg slutar växa; adressen som dyker upp offentligt är en delad server i stället för den som är kopplad till din linje."
+            ]
+          },
+          {
+            "h2": "Vad den inte täcker",
+            "p": [
+              "Bedrägeri: du skriver fortfarande in lösenordet i fel webbplats, och tunneln levererar det troget. Skadlig programvara: nedladdningen körs fortfarande. En läckt butik: din mejl och ditt lösenord finns i en databas oavsett var du anslöt från. Kontoövertagande: den som har din session behöver inte din adress.",
+              "Den stoppar heller inte någon som bevakar båda ändarna, en webbläsare som ger avtryck, eller en arbetsgivarens eller skolans enhet som styr vad du installerar. Lagret över tunneln — dina konton, din webbläsare, dina filer — rörs inte av den.",
+              "Gränsen är enkel att formulera: tunneln skyddar anslutningen, inte innehållet du lämnar ifrån dig när du har kommit fram. Allt du skriver, laddar upp eller installerar passerar igenom den orört, och VPN:n har inget sätt att skilja den säkra förfrågan från den vårdslösa."
+            ]
+          },
+          {
+            "h2": "Hotet, och lagret som besvarar det",
+            "p": [
+              "Det användbara sättet att tänka på det är som en mappning snarare än ett enda verktyg:",
+              "Ingen ensam produkt besvarar alla dessa, och att behandla en VPN som om den gjorde det är så folk blir besvikna på den."
+            ],
+            "list": [
+              "Avlyssning på öppet wifi — en VPN besvarar det helt.",
+              "Din internetleverantör som sparar en destinationslogg — en VPN besvarar det medan den är på.",
+              "Din adress som dyker upp i ett torrentswarm — en VPN besvarar det.",
+              "Regionspärrar och IP-baserad blockering — en VPN besvarar det oftast.",
+              "Bedrägeri, svaga lösenord, läckta databaser — en lösenordshantering och tvåfaktorsautentisering besvarar det.",
+              "Skadlig programvara och ransomware — uppdateringar, varsamma nedladdningar och säkerhetskopior besvarar det.",
+              "Att spåras medan man är inloggad på webbplatser — bara att inte logga in, eller en webbläsare som blockerar spårare, hanterar det."
+            ]
+          },
+          {
+            "h2": "Lagret som oftast spelar större roll",
+            "p": [
+              "För de flesta hushåll är den säkerhetsutgift som ger mest tillbaka helt utan glamyr: en lösenordshantering så att varje webbplats får en unik hemlighet, tvåfaktorsautentisering på de konton som spelar roll, uppdateringar utan dröjsmål, och en säkerhetskopia som återställer när något går sönder.",
+              "En VPN står bredvid dem snarare än framför dem. Det är lagret som skyddar själva anslutningen, och därför viktlägger vi integritet — vad leverantören gör med dina data — som den största enskilda komponenten i betyget: {{method}}.",
+              "Inget av det är dyrt, och inget av det konkurrerar med VPN:n om uppmärksamhet när det väl är på plats. Mönstret som fungerar är en kort lista du slutför i stället för en lång du lämnar: unika lösenord, en andra faktor på kontona som spelar roll, uppdateringar utan dröjsmål, och en säkerhetskopia du faktiskt har återställt en gång."
+            ]
+          },
+          {
+            "h2": "Välj det lager du faktiskt kommer att använda",
+            "p": [
+              "Ett skydd som kräver ett beslut varje gång är ett du hoppar över. Det är det praktiska argumentet för att lämna en VPN på som standard i stället för per webbplats: tunneln är antingen uppe eller inte, och en vana slår en avsikt.",
+              "Om du väljer vilken leverantör som förtjänar den standardpositionen på dina enheter jämförs alla elva på integritet, hastighet och pris med vikterna som visas: {{compare}}. Nybörjarvägen genom hela uppsättningen finns här: {{guide:beginners}}.",
+              "Den ordningen spelar roll när pengar är inblandade. Ett hushåll som köper en VPN och hoppar över en lösenordshantering har köpt det näst mest användbara lagret och lämnat det första på bordet — och det första är billigare."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Skyddar en VPN mot hackare?",
+            "Den skyddar mot en specifik sorts hot: någon som läser nätverket du är i. Den skyddar inte mot någon som lurar dig att lämna in uppgifter, installera något, eller återanvända ett läckt lösenord. Det besvaras av autentisering och vanor, inte av en tunnel."
+          ],
+          [
+            "Skyddar en VPN mina bankuppgifter?",
+            "Din bankanslutning var redan krypterad med HTTPS innan VPN:n fanns, och den förblir krypterad. VPN:n lägger till en privat väg till en server du valt och döljer destinationen för din internetleverantör — en verklig fördel, men inte det som håller kortnummer säkra."
+          ],
+          [
+            "Behöver jag fortfarande antivirus med en VPN?",
+            "Ja. En VPN krypterar trafik i transit; den inspekterar inte vad som kommer fram eller vad du kör. Håll ditt system uppdaterat, var misstänksam mot bilagor och nedladdningar, och behandla VPN:n som nätverkslagret i den uppsättningen snarare än som en ersättning för någon del av den."
+          ]
+        ]
+      }
+    }
+  ]
+}
